@@ -1,0 +1,62 @@
+[
+  { "id": "cuma_01", "category": "cuma", "message": "Hayırlı Cumalar", "gradient": ["#FBF6EC", "#EFE3CC"], "textColor": "#2F5D50", "accent": "#C9A45C", "icon": "mosque" },
+  { "id": "cuma_02", "category": "cuma", "message": "Cumanız mübarek olsun", "gradient": ["#2F5D50", "#1F4038"], "textColor": "#F3E6C4", "accent": "#D8B76A", "icon": "moon" },
+  { "id": "cuma_03", "category": "cuma", "message": "Rabbim dualarınızı kabul etsin. Hayırlı Cumalar", "gradient": ["#F3E7D3", "#E2CBA4"], "textColor": "#5B4630", "accent": "#B48A3E", "icon": "sunrise" },
+  { "id": "cuma_04", "category": "cuma", "message": "Gönlünüz huzur, eviniz bereket dolsun. Hayırlı Cumalar", "gradient": ["#1F3A33", "#0F2420"], "textColor": "#E8D3A2", "accent": "#C9A45C", "icon": "stars" },
+
+  { "id": "ramazan_01", "category": "ramazan_bayrami", "message": "Ramazan Bayramınız mübarek olsun", "gradient": ["#2F5D50", "#1F4038"], "textColor": "#F3E6C4", "accent": "#D8B76A", "icon": "moon" },
+  { "id": "ramazan_02", "category": "ramazan_bayrami", "message": "Nice sağlıklı ve huzurlu bayramlara", "gradient": ["#FBF6EC", "#EFE3CC"], "textColor": "#2F5D50", "accent": "#C9A45C", "icon": "celebration" },
+  { "id": "ramazan_03", "category": "ramazan_bayrami", "message": "Bayramınız kutlu, gönlünüz şen olsun", "gradient": ["#F7EDE6", "#E9D2C3"], "textColor": "#6B3F35", "accent": "#B48A3E", "icon": "stars" },
+
+  { "id": "kurban_01", "category": "kurban_bayrami", "message": "Kurban Bayramınız mübarek olsun", "gradient": ["#F3E7D3", "#E2CBA4"], "textColor": "#2F5D50", "accent": "#B48A3E", "icon": "mosque" },
+  { "id": "kurban_02", "category": "kurban_bayrami", "message": "Kurbanlarınız kabul olsun", "gradient": ["#2F5D50", "#1F4038"], "textColor": "#F3E6C4", "accent": "#D8B76A", "icon": "celebration" },
+  { "id": "kurban_03", "category": "kurban_bayrami", "message": "Sevdiklerinizle nice bayramlara", "gradient": ["#FBF6EC", "#EFE3CC"], "textColor": "#5B4630", "accent": "#C9A45C", "icon": "sunrise" },
+
+
+  { "id": "sabah_01", "category": "sabah", "message": "Hayırlı sabahlar", "gradient": ["#FBF3E4", "#F1DDB8"], "textColor": "#5B4630", "accent": "#C9A45C", "icon": "sunrise" },
+  { "id": "sabah_02", "category": "sabah", "message": "Gününüz aydın, işleriniz rast gelsin", "gradient": ["#F3E7D3", "#E2CBA4"], "textColor": "#2F5D50", "accent": "#B48A3E", "icon": "sunrise" },
+  { "id": "sabah_03", "category": "sabah", "message": "Huzurlu ve bereketli bir gün dilerim", "gradient": ["#2F5D50", "#1F4038"], "textColor": "#F3E6C4", "accent": "#D8B76A", "icon": "mosque" },
+
+  { "id": "gece_01", "category": "gece", "message": "Hayırlı geceler", "gradient": ["#1F3A33", "#0F2420"], "textColor": "#E8D3A2", "accent": "#C9A45C", "icon": "moon" },
+  { "id": "gece_02", "category": "gece", "message": "Allah rahatlık versin, hayırlı geceler", "gradient": ["#22324A", "#121C2C"], "textColor": "#EBDDB8", "accent": "#C9A45C", "icon": "stars" },
+  { "id": "gece_03", "category": "gece", "message": "Huzur dolu bir gece dilerim", "gradient": ["#2F5D50", "#1F4038"], "textColor": "#F3E6C4", "accent": "#D8B76A", "icon": "moon" },
+
+  { "id": "uc_aylar_01", "category": "uc_aylar", "message": "Üç Aylarınız mübarek olsun", "gradient": ["#1F3A33", "#0F2420"], "textColor": "#E8D3A2", "accent": "#C9A45C", "icon": "stars" },
+  { "id": "uc_aylar_02", "category": "uc_aylar", "message": "Rahmet ve bereket ayları hayırlara vesile olsun", "gradient": ["#FBF6EC", "#EFE3CC"], "textColor": "#2F5D50", "accent": "#C9A45C", "icon": "moon" },
+  { "id": "uc_aylar_03", "category": "uc_aylar", "message": "Hoş geldin Üç Aylar. Dualarınız kabul olsun", "gradient": ["#2F5D50", "#1F4038"], "textColor": "#F3E6C4", "accent": "#D8B76A", "icon": "mosque" },
+
+  { "id": "hicri_01", "category": "hicri_yilbasi", "message": "Hicri yeni yılınız mübarek olsun", "gradient": ["#2F5D50", "#1F4038"], "textColor": "#F3E6C4", "accent": "#D8B76A", "icon": "moon" },
+  { "id": "hicri_02", "category": "hicri_yilbasi", "message": "Yeni Hicri yıl hayırlara vesile olsun", "gradient": ["#FBF6EC", "#EFE3CC"], "textColor": "#5B4630", "accent": "#C9A45C", "icon": "stars" },
+
+  { "id": "arefe_01", "category": "arefe", "message": "Arefeniz mübarek olsun", "gradient": ["#2F5D50", "#1F4038"], "textColor": "#F3E6C4", "accent": "#D8B76A", "icon": "moon" },
+  { "id": "arefe_02", "category": "arefe", "message": "Hayırlı arefeler", "gradient": ["#FBF6EC", "#EFE3CC"], "textColor": "#2F5D50", "accent": "#C9A45C", "icon": "stars" },
+  { "id": "arefe_03", "category": "arefe", "message": "Bayramın bereketi şimdiden üzerinize olsun", "gradient": ["#F3E7D3", "#E2CBA4"], "textColor": "#5B4630", "accent": "#B48A3E", "icon": "celebration" },
+
+  { "id": "regaib_01", "category": "regaib", "message": "Regaib Kandiliniz mübarek olsun", "gradient": ["#1F3A33", "#0F2420"], "textColor": "#E8D3A2", "accent": "#C9A45C", "icon": "stars" },
+  { "id": "regaib_02", "category": "regaib", "message": "Regaib gecesi hayırlara vesile olsun", "gradient": ["#2F5D50", "#1F4038"], "textColor": "#F3E6C4", "accent": "#D8B76A", "icon": "moon" },
+  { "id": "regaib_03", "category": "regaib", "message": "Dualarınız kabul olsun. Hayırlı kandiller", "gradient": ["#FBF6EC", "#EFE3CC"], "textColor": "#2F5D50", "accent": "#C9A45C", "icon": "mosque" },
+
+  { "id": "mirac_01", "category": "mirac", "message": "Miraç Kandiliniz mübarek olsun", "gradient": ["#22324A", "#121C2C"], "textColor": "#EBDDB8", "accent": "#C9A45C", "icon": "stars" },
+  { "id": "mirac_02", "category": "mirac", "message": "Bu mübarek gecede dualarınız kabul olsun", "gradient": ["#2F5D50", "#1F4038"], "textColor": "#F3E6C4", "accent": "#D8B76A", "icon": "moon" },
+  { "id": "mirac_03", "category": "mirac", "message": "Miraç gecesinin huzuru gönlünüzde olsun", "gradient": ["#FBF6EC", "#EFE3CC"], "textColor": "#2F5D50", "accent": "#C9A45C", "icon": "mosque" },
+
+  { "id": "berat_01", "category": "berat", "message": "Berat Kandiliniz mübarek olsun", "gradient": ["#1F3A33", "#0F2420"], "textColor": "#E8D3A2", "accent": "#C9A45C", "icon": "moon" },
+  { "id": "berat_02", "category": "berat", "message": "Berat gecesi hayırlara vesile olsun", "gradient": ["#F3E7D3", "#E2CBA4"], "textColor": "#5B4630", "accent": "#B48A3E", "icon": "stars" },
+  { "id": "berat_03", "category": "berat", "message": "Rabbim dualarınızı kabul etsin. Hayırlı kandiller", "gradient": ["#2F5D50", "#1F4038"], "textColor": "#F3E6C4", "accent": "#D8B76A", "icon": "mosque" },
+
+  { "id": "kadir_01", "category": "kadir", "message": "Kadir Geceniz mübarek olsun", "gradient": ["#22324A", "#121C2C"], "textColor": "#EBDDB8", "accent": "#C9A45C", "icon": "stars" },
+  { "id": "kadir_02", "category": "kadir", "message": "Kadir Gecesi’nin rahmeti üzerinize olsun", "gradient": ["#1F3A33", "#0F2420"], "textColor": "#E8D3A2", "accent": "#C9A45C", "icon": "moon" },
+  { "id": "kadir_03", "category": "kadir", "message": "Dualarınız kabul olsun. Hayırlı Kadir Geceleri", "gradient": ["#2F5D50", "#1F4038"], "textColor": "#F3E6C4", "accent": "#D8B76A", "icon": "mosque" },
+
+  { "id": "mevlid_01", "category": "mevlid", "message": "Mevlid Kandiliniz mübarek olsun", "gradient": ["#F7EDE6", "#E9D2C3"], "textColor": "#6B3F35", "accent": "#B48A3E", "icon": "stars" },
+  { "id": "mevlid_02", "category": "mevlid", "message": "Mevlid gecesi hayırlara vesile olsun", "gradient": ["#2F5D50", "#1F4038"], "textColor": "#F3E6C4", "accent": "#D8B76A", "icon": "moon" },
+  { "id": "mevlid_03", "category": "mevlid", "message": "Gönlünüz huzur, eviniz bereket dolsun. Hayırlı kandiller", "gradient": ["#FBF6EC", "#EFE3CC"], "textColor": "#2F5D50", "accent": "#C9A45C", "icon": "mosque" },
+
+  { "id": "ramazan_ayi_01", "category": "ramazan", "message": "Hoş geldin on bir ayın sultanı", "gradient": ["#1F3A33", "#0F2420"], "textColor": "#E8D3A2", "accent": "#C9A45C", "icon": "moon" },
+  { "id": "ramazan_ayi_02", "category": "ramazan", "message": "Hayırlı Ramazanlar", "gradient": ["#2F5D50", "#1F4038"], "textColor": "#F3E6C4", "accent": "#D8B76A", "icon": "stars" },
+  { "id": "ramazan_ayi_03", "category": "ramazan", "message": "Ramazan-ı Şerifiniz mübarek olsun", "gradient": ["#FBF6EC", "#EFE3CC"], "textColor": "#2F5D50", "accent": "#C9A45C", "icon": "mosque" },
+  { "id": "ramazan_ayi_04", "category": "ramazan", "message": "Oruçlarınız ve dualarınız kabul olsun", "gradient": ["#F3E7D3", "#E2CBA4"], "textColor": "#5B4630", "accent": "#B48A3E", "icon": "sunrise" },
+
+  { "id": "asure_01", "category": "asure", "message": "Aşure Gününüz mübarek olsun", "gradient": ["#F3E7D3", "#E2CBA4"], "textColor": "#5B4630", "accent": "#B48A3E", "icon": "celebration" },
+  { "id": "asure_02", "category": "asure", "message": "Aşureniz bereketli, gönlünüz bol olsun", "gradient": ["#F7EDE6", "#E9D2C3"], "textColor": "#6B3F35", "accent": "#B48A3E", "icon": "stars" }
+]
