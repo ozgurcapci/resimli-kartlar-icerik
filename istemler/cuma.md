@@ -1,19 +1,15 @@
 # Cuma kartları: Flow istemleri (Nano Banana Pro, 9:16, x2)
 
-Karışık set: 8 suluboya, 12 gerçekçi (fotoğraf tarzı). Her istem = konu cümlesi + üsluba uygun ortak kuyruk.
+Konsept: **yalnızca suluboya** (gerçekçi/fotoğraf tarzı kartlar 2026-11-18'de kaldırıldı). Her istem = konu cümlesi + ortak kuyruk.
 Uygulamada görsel gönderide (4:5) alta hizalı kırpılır, üstü kesilir. Mesaj ve büyük el yazısı "Hayırlı Cumalar" kartın üst kısmına yazılıyor; bu yüzden konu alt yarıda, üst kısım sakin olmalı.
 
 **Kırpmadan ya da yüzdeden söz etmeyin.** İlk denemede "top 13% and bottom 13% will be cropped" yazınca model üstte ve altta boş şeritler çizdi.
 
 ## Suluboya kuyruğu
 
-> Full-bleed vertical watercolor painting with delicate gold-leaf accents, Ottoman-Turkish Islamic aesthetic, serene and elegant, hand-painted on textured cotton paper. The background color and paper texture continue evenly all the way to every edge of the image: no blank strips, no bands, no margins, no white edges at the top or bottom. The main subject sits in the lower third of the image, a little above the bottom edge. The middle of the image is calm, open background with only soft texture, so a greeting text can be written there later. No text, no letters, no calligraphy, no Arabic script, no numbers, no watermark, no frame or border. No glow, no halo, no lens flare. No moon, no crescent, no stars.
+> Full-bleed vertical watercolor painting with delicate gold-leaf accents, Ottoman-Turkish Islamic aesthetic, serene and elegant, hand-painted on textured cotton paper. The background color and paper texture continue evenly all the way to every edge of the image: no blank strips, no bands, no margins, no white edges at the top or bottom. The main subject sits low in the image, grounded near the bottom edge, and does not rise above the middle of the image. The entire upper half is calm, open background with only soft watercolor washes and a few tiny gold flecks, so a greeting text can be written there later. No text, no letters, no calligraphy, no Arabic script, no numbers, no watermark, no frame or border. No glow, no halo, no lens flare. No moon, no crescent, no stars.
 
-## Gerçekçi kuyruk
-
-> Photorealistic, high-quality vertical photograph, full frame edge to edge, soft natural light, gentle warm colors, peaceful mood. The main subject is in the lower third of the frame; the middle of the frame is calm and uncluttered (open sky, soft light or gently blurred background) so a greeting text can be written there later. No people, no text, no letters, no logos, no watermark, no borders, no blank strips. No moon, no crescent, no stars.
-
----
+(İlk sette kuyruk "lower third … middle calm" diyordu; laleli vazo gibi uzun konular yine de ortaya taştı. Yeni kuyruk "üst yarı boş" diyor.)
 
 ## Suluboya
 
@@ -33,28 +29,28 @@ Uygulamada görsel gönderide (4:5) alta hizalı kırpılır, üstü kesilir. Me
 
 **08**: A graceful olive branch with silver-green leaves and a few small white jasmine flowers. Pale warm cream paper background (#F6EFE3).
 
-## Gerçekçi
+## Suluboya, 2. set (cuma_25–36)
 
-**09**: Sunrise over layered misty mountains and a quiet green valley, golden rays breaking through soft clouds.
+**21**: An Ottoman mosque with domes and two minarets at sunrise, soft peach and rose washes in the sky fading upward into pale cream paper.
 
-**10**: A field of red and yellow tulips at sunrise, dew on the petals, the flowers sharp in the foreground and the sky softly glowing above.
+**22**: A tulip-shaped glass of Turkish tea on a small engraved copper tray, a string of wooden prayer beads (tesbih) and a sprig of white jasmine beside it. Pale warm cream paper background (#F6EFE3).
 
-**11**: Close-up of a single pink rose with dew drops, morning light, creamy soft bokeh background in warm beige tones.
+**23**: A few white doves flying low over the domes of a small Ottoman mosque, soft sage and cream tones. Pale warm cream paper background (#F6EFE3).
 
-**12**: Istanbul Bosphorus at golden hour, silhouettes of mosque domes and minarets on the skyline low in the frame, calm water, warm orange and pink sky.
+**24**: Branches of pale pink cherry blossoms rising from the bottom edge, soft petals drifting. Background: a very pale sky-blue watercolor wash fading to cream.
 
-**13**: A calm mountain lake at dawn with perfect reflections, pine trees at the shore, pastel pink and blue sky.
+**25**: A bouquet of lavender in a small white ceramic jug with a faint blue Iznik pattern. Pale warm cream paper background (#F6EFE3).
 
-**14**: A meadow of white chamomile daisies with warm sunbeams streaming across, very shallow depth of field.
+**26**: Lush blush-pink peonies with green leaves and fine gold-leaf edges on a few petals. Pale soft blush paper background (#F7ECE8).
 
-**15**: A wooden prayer bead string (tesbih) and a small glass of Turkish tea on a wooden windowsill, soft morning sunlight streaming in, blurred green garden outside the window.
+**27**: Red and pink carnations rising from the bottom, framed by a faint fragment of a classic Iznik tile carnation motif in coral red and cobalt blue fading into the paper. Pale warm cream paper background (#F6EFE3).
 
-**16**: Branches of white and pale pink apple blossoms reaching up from the bottom of the frame against a soft clear blue sky.
+**28**: The Istanbul skyline with mosque domes and minarets as a soft silhouette along the Bosphorus near the bottom, calm water, sky in gentle lavender and peach washes fading upward into cream.
 
-**17**: A lavender field in rows leading to the horizon at sunset, warm golden light, a lone tree in the distance.
+**29**: A quince branch with three ripe golden-yellow quinces and soft green leaves. Pale warm cream paper background (#F6EFE3).
 
-**18**: A peaceful forest path with tall trees and soft sunbeams falling through morning mist.
+**30**: A small white marble Ottoman fountain (çeşme) with a carved arch, pink climbing roses around it. Pale warm cream paper background (#F6EFE3).
 
-**19**: The courtyard of a historic Ottoman mosque with an ablution fountain and white doves on the stone floor, soft morning light, arches in the background.
+**31**: A single ornate brass Ottoman lantern with warm candlelight standing on the ground among a few deep red roses. Background: softly graded deep sage green from #2F5D50 at the top to #1F4038 at the bottom.
 
-**20**: A glass of Turkish tea on a balcony table with a few red geraniums in a pot, overlooking a calm sea in early morning light.
+**32**: White Madonna lilies with long green leaves in a slender clear glass vase. Pale warm cream paper background (#F6EFE3).
