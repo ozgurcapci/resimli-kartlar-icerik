@@ -54,3 +54,9 @@ Uygulamada görsel gönderide (4:5) alta hizalı kırpılır, üstü kesilir. Me
 **31**: A single ornate brass Ottoman lantern with warm candlelight standing on the ground among a few deep red roses. Background: softly graded deep sage green from #2F5D50 at the top to #1F4038 at the bottom.
 
 **32**: White Madonna lilies with long green leaves in a slender clear glass vase. Pale warm cream paper background (#F6EFE3).
+
+## Koyu zeminli set (cuma_37–42)
+
+Aynı kuyruk; "Pale cream paper background" yerine koyu degrade zemin ve "calm, open **dark** background … so a **light** greeting text can be written there later". Kullanılan zeminler: koyu adaçayı yeşili #2F5D50→#1F4038, gece mavisi #22324A→#121C2C, bordo #4A1E2A→#2E1119, koyu turkuaz #1F4A4A→#123030, mor #3A2340→#22142A. Yazı rengi krem #FFF8E7.
+
+Konular: beyaz güller ve inci tesbih, fenerler ve yasemin, zeytin dalı ve yasemin, nar, pirinç kandil, tesbih ve zambak.
