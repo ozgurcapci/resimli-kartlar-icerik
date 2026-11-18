@@ -1,7 +1,7 @@
 # Cuma kartları: Flow istemleri (Nano Banana Pro, 9:16, x2)
 
 Karışık set: 8 suluboya, 12 gerçekçi (fotoğraf tarzı). Her istem = konu cümlesi + üsluba uygun ortak kuyruk.
-Mesaj kartın %42 yüksekliğine, isim %78'e yazılıyor; görsel 4:5'e ortadan kırpılıyor. Bu yüzden konu alt üçte birde, orta bölge sakin.
+Uygulamada görsel gönderide (4:5) alta hizalı kırpılır, üstü kesilir. Mesaj ve büyük el yazısı "Hayırlı Cumalar" kartın üst kısmına yazılıyor; bu yüzden konu alt yarıda, üst kısım sakin olmalı.
 
 **Kırpmadan ya da yüzdeden söz etmeyin.** İlk denemede "top 13% and bottom 13% will be cropped" yazınca model üstte ve altta boş şeritler çizdi.
 
