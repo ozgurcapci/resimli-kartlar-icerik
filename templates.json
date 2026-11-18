@@ -19,6 +19,12 @@
   {"id": "cuma_34", "category": "cuma", "message": "Rabbim yolunuzu aydınlık eylesin", "greeting": "Hayırlı Cumalar", "image": "cuma/cuma_34.jpg", "textColor": "#2F5D50", "accent": "#C9A45C"},
   {"id": "cuma_35", "category": "cuma", "message": "Bir çay, bir dua…", "greeting": "Hayırlı Cumalar", "image": "cuma/cuma_35.jpg", "textColor": "#5B4630", "accent": "#C9A45C"},
   {"id": "cuma_36", "category": "cuma", "message": "Mübarek gününüz hayırlara vesile olsun", "greeting": "Hayırlı Cumalar", "image": "cuma/cuma_36.jpg", "textColor": "#2F5D50", "accent": "#C9A45C"},
+  {"id": "cuma_37", "category": "cuma", "message": "Cumanız nur, gönlünüz huzur dolsun", "greeting": "Hayırlı Cumalar", "image": "cuma/cuma_37.jpg", "textColor": "#FFF8E7", "accent": "#C9A45C"},
+  {"id": "cuma_38", "category": "cuma", "message": "Evinize nur, gönlünüze sürur dolsun", "greeting": "Hayırlı Cumalar", "image": "cuma/cuma_38.jpg", "textColor": "#FFF8E7", "accent": "#C9A45C"},
+  {"id": "cuma_39", "category": "cuma", "message": "Bereketli ve huzurlu bir gün dilerim", "greeting": "Hayırlı Cumalar", "image": "cuma/cuma_39.jpg", "textColor": "#FFF8E7", "accent": "#C9A45C"},
+  {"id": "cuma_40", "category": "cuma", "message": "Rabbim bereketini artırsın", "greeting": "Hayırlı Cumalar", "image": "cuma/cuma_40.jpg", "textColor": "#FFF8E7", "accent": "#C9A45C"},
+  {"id": "cuma_41", "category": "cuma", "message": "Dualarınız nurlu olsun", "greeting": "Hayırlı Cumalar", "image": "cuma/cuma_41.jpg", "textColor": "#FFF8E7", "accent": "#C9A45C"},
+  {"id": "cuma_42", "category": "cuma", "message": "Dua ile kalın", "greeting": "Hayırlı Cumalar", "image": "cuma/cuma_42.jpg", "textColor": "#FFF8E7", "accent": "#C9A45C"},
 
   {"id": "ramazan_01", "category": "ramazan_bayrami", "message": "Ramazan Bayramınız mübarek olsun", "gradient": ["#2F5D50", "#1F4038"], "textColor": "#F3E6C4", "accent": "#D8B76A", "icon": "moon"},
   {"id": "ramazan_02", "category": "ramazan_bayrami", "message": "Nice sağlıklı ve huzurlu bayramlara", "gradient": ["#FBF6EC", "#EFE3CC"], "textColor": "#2F5D50", "accent": "#C9A45C", "icon": "celebration"},
