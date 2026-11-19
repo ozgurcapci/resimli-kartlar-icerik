@@ -26,6 +26,8 @@ Uygulama listeyi en fazla 6 saatte bir yeniler. Yeni hali bir sonraki açılış
 - `category`: `cuma`, `ramazan_bayrami`, `kurban_bayrami`, `arefe`, `regaib`, `mirac`, `berat`, `kadir`, `mevlid`, `sabah`, `gece`, `uc_aylar`, `ramazan`, `hicri_yilbasi`, `asure`. Uygulamanın tanımadığı kategori atlanır.
 - `image`: `cards/` altındaki göreli yol. Görsel 9:16 (1080×1920) JPG olmalı, 250–350 KB civarında; gönderi boyutunda (4:5) ortadan kırpılır. Görselin üstünde yazı olmamalı, mesajı uygulama yazar.
 - `textColor` görsele göre seçilir. `gradient` görselli kartlarda gerekmez, görsel yüklenirken görünür.
+- `greeting`: mesajın altındaki büyük el yazısı selam ("Hayırlı Bayramlar"); el yazısı satırına sığmayan uzun selam küçülür, uzun ifadeyi mesaja yazın.
+- `greetingFont`: selamın el yazısı: `greatVibes` (varsayılan), `alexBrush`, `parisienne`, `dancingScript`. Eski uygulama sürümleri bu alanı yok sayar.
 - `premium: true` olan kart yalnız premium üyelere açık.
 
 ## Kurallar
