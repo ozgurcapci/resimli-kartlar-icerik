@@ -1,4 +1,4 @@
-"""17 fotoğraf (İndirilenler, mtime sırası) → 9:16 → cuma_64…; 9 numara (ters dağ) atlanır. cuma_63'ün ardına eklenir."""
+"""19 fotoğraf (İndirilenler, mtime sırası) → 9:16 → cuma_80…; cuma_79'un ardına eklenir."""
 import io, json, re
 from pathlib import Path
 from PIL import Image, ImageStat
@@ -6,25 +6,28 @@ from PIL import Image, ImageStat
 DL = Path.home() / "Downloads"
 REPO = Path("E:/yedek/Vibe Coding/Claude/apps/resimli-kartlar-icerik")
 FILES = sorted(DL.glob("*_2K.jpg"), key=lambda f: (f.stat().st_mtime, f.name))
-assert len(FILES) == 17, len(FILES)
+assert len(FILES) == 19, len(FILES)
 HC, CM, CH, MC = "Hayırlı Cumalar", "Cumanız Mübarek Olsun", "Cumanız Hayırlı Olsun", "Mübarek Cumalar"
 CARDS = [
-    (0, "Şafak kadar aydınlık, dağlar kadar ferah bir Cuma dilerim", HC),
-    (1, "Gönlünüz lale bahçesi gibi rengârenk olsun", CM),
-    (2, "Gül kokulu dualarınız kabul olsun", MC),
-    (3, "Bereketiniz tarlalar dolusu olsun", HC),
-    (4, "Minarelerden yükselen ezan gönlünüze huzur versin", HC),
-    (5, "Sabah çiyi gibi tertemiz bir gün dilerim", CH),
-    (6, "Durgun bir göl gibi sakin bir gönül dilerim", HC),
-    (7, "Akşamınız da sabahınız da nurlu olsun", CM),
-    (8, "Papatyalar gibi sade ve temiz bir gönül dilerim", HC),
-    (10, "Bir bardak çay, bir tesbih, bir hayır duası", HC),
-    (11, "Güneşin ışığı gibi rahmet üzerinize yağsın", MC),
-    (12, "Kalbiniz bahar dalları gibi çiçek açsın", CH),
-    (13, "Pencerenizden hayır, kapınızdan bereket girsin", CM),
-    (14, "Deniz kenarında bir çay, gönülde bir dua", HC),
-    (15, "Lavanta kokulu, huzur dolu bir Cuma dilerim", MC),
-    (16, "Güne bir çay ve bir dua ile başlayın", CH),
+    (0, "Açılan her el boş dönmesin", HC),
+    (1, "Hurma tatlılığında, su berraklığında bir gün dilerim", CH),
+    (2, "Kırlangıçlar gibi müjdeli haberleriniz olsun", HC),
+    (3, "Bir güvercin kanadında selam gönderdim", MC),
+    (4, "Gönlünüz gül gibi açılsın, rahmetle dolsun", CM),
+    (5, "Secdeniz nurlu, gönlünüz ak olsun", HC),
+    (6, "Kandil ışığı gibi sönmeyen bir iman dilerim", MC),
+    (7, "Ayetlerin bereketi hanenizi sarsın", CM),
+    (8, "Her mevsim gönlünüz huzurla dolsun", HC),
+    (9, "Medine’nin selamı gönlünüze ulaşsın", CH),
+    (10, "Her tane bir dua, her dua bir şifa olsun", HC),
+    (11, "İstanbul’un akşamından size selam olsun", MC),
+    (12, "Gül bahçeleri gibi kokulu bir gün dilerim", CH),
+    (13, "Akan su gibi bereketiniz bol olsun", HC),
+    (14, "Kâbe’ye dönen gönüller dualarda buluşsun", CM),
+    (15, "Avlularda yükselen dualar sizin için olsun", HC),
+    (16, "Yüzünüz bahar gibi gülsün", CH),
+    (17, "Sarı güller gibi neşeli bir gün dilerim", MC),
+    (18, "Yayla serinliğinde, huzur dolu bir Cuma dilerim", HC),
 ]
 W, H = 1080, 1920; PH = W * 5 // 4; TOP = H - PH
 
@@ -50,7 +53,7 @@ def color(img):
 
 
 rows = []
-for n, (i, msg, greet) in enumerate(CARDS, 64):
+for n, (i, msg, greet) in enumerate(CARDS, 80):
     img = to_9x16(Image.open(FILES[i]).convert("RGB")); cid = f"cuma_{n:02d}"
     size = save_small(img, REPO / "cards" / "cuma" / f"{cid}.jpg"); c = color(img)
     rows.append({"id": cid, "category": "cuma", "message": msg, "greeting": greet, "image": f"cuma/{cid}.jpg",
@@ -60,8 +63,8 @@ for n, (i, msg, greet) in enumerate(CARDS, 64):
 lines = (REPO / "templates.json").read_text(encoding="utf-8").split("\n"); out = []
 for l in lines:
     out.append(l)
-    if '"id": "cuma_63"' in l:
+    if '"id": "cuma_79"' in l:
         assert l.rstrip().endswith(",")
         out += ["  " + json.dumps(r, ensure_ascii=False) + "," for r in rows]
-txt = "\n".join(out); data = json.loads(txt); assert len({t["id"] for t in data}) == len(data) == 186
+txt = "\n".join(out); data = json.loads(txt); assert len({t["id"] for t in data}) == len(data) == 205
 (REPO / "templates.json").write_text(txt, encoding="utf-8", newline="\n")

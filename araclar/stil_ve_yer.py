@@ -20,8 +20,10 @@ STYLES = {
     "selamOnde": dict(mf="GildaDisplay.ttf", ms=.047, mw=None, tr=.02, lh=1.32, gf="Allura.ttf", gs=.135, measure=.74, gap=.016, first="g"),
 }
 ROTATION = ["kitabe", "klasik", "selamOnde"]
-OVERRIDE = {"kadir_05": "klasik", "cuma_76": "klasik", "cuma_79": "klasik"}  # konu yukarıdan başlıyor, iri selam ele değiyordu
+OVERRIDE = {"kadir_05": "klasik", "cuma_76": "klasik", "cuma_79": "klasik",  # konu yukarıdan başlıyor, iri selam ele değiyordu
+            "cuma_88": "klasik", "cuma_93": "klasik", "cuma_94": "klasik"}  # iri selam ağaca, taşa, ufka biniyordu
 G_MAX, G_LH, M_FIT, G_FIT = .86, 1.1, .92, .72
+G_LH_MULTI = {"Corinthia.ttf": .85}  # iki satırlı selamda satır yüksekliği (ScriptFont.lineHeight)
 TOP_MIN, TOP_MAX = .055, .22
 TOP_OVERRIDE = {"cuma_76": .055}  # alttaki parlak bahçe yerine üstteki açık alan
 
@@ -94,6 +96,7 @@ def lay(kind, text, st):
             if kind == "g" and len(lines) > 2: lines = best_two(words, face)
             widest = max(map(face.width, lines))
             if widest > maxw: face = face.scaled(maxw / widest)
+            if kind == "g" and len(lines) > 1: face.lh = G_LH_MULTI.get(s["gf"], G_LH)
     return lines, face
 
 
