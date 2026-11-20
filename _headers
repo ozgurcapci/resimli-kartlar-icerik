@@ -1,0 +1,8 @@
+# Cloudflare Workers durağan dosya başlıkları.
+# Kart görselleri değişmez (değişen görsele yeni ad verilir: _v2): bir yıl önbellekte kalabilir.
+/cards/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Liste sık güncellenir: 5 dakika.
+/templates.json
+  Cache-Control: public, max-age=300
