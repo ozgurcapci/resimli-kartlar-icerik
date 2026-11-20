@@ -1,4 +1,6 @@
-"""40 görsel (İndirilenler, mtime sırası) → 9:16 → beş kandile sekizer; her kategorinin son kartının ardına eklenir."""
+"""İndirilenler'deki görseller (mtime sırası) → 9:16 → CARDS'taki kategorilere; her kategorinin son kartının ardına eklenir.
+
+Son kullanım: Üç Aylar için 24 görsel (uc_aylar_04–27)."""
 import io, json
 from pathlib import Path
 from PIL import Image, ImageStat
@@ -6,64 +8,38 @@ from PIL import Image, ImageStat
 DL = Path.home() / "Downloads"
 REPO = Path("E:/yedek/Vibe Coding/Claude/apps/resimli-kartlar-icerik")
 FILES = sorted(DL.glob("*_2K.jpg"), key=lambda f: (f.stat().st_mtime, f.name))
-assert len(FILES) == 40, len(FILES)
-HK, KMO, MK = "Hayırlı Kandiller", "Kandiliniz Mübarek Olsun", "Mübarek Kandiller"
-MV = "Mevlid Kandiliniz Mübarek Olsun"
-KG, HKG = "Kadir Geceniz Mübarek Olsun", "Hayırlı Kadir Geceleri"
+assert len(FILES) == 24, len(FILES)
+HUA, UAMO, MUA = "Hayırlı Üç Aylar", "Üç Aylarınız Mübarek Olsun", "Mübarek Üç Aylar"
 # kategori → [(görsel sırası, mesaj, selam)]
 CARDS = {
-    "regaib": [
-        (1, "Üç ayların bereketi gönlünüze yol bulsun", HK),
-        (7, "Gönlünüz bu göl gibi dingin, duanız kabul olsun", MK),
-        (15, "Üç ayların kapısı rahmetle açılsın", KMO),
-        (18, "Recep’in ilk kandili gönlünüzü gül bahçesine çevirsin", HK),
-        (23, "Uzaktaki sevdiklerime kandil selamı", MK),
-        (25, "Rağbet gecesinde dilekleriniz karşılık bulsun", HK),
-        (32, "Kanatlanan dualar Rabbime ulaşsın", KMO),
-        (33, "Üç ayların baharı gönlünüzde açsın", HK),
-    ],
-    "mirac": [
-        (6, "Bu gece semalar açık, dualar makbul olsun", HK),
-        (8, "Boğaz’ın ışıkları gibi gönlünüz nurlansın", MK),
-        (13, "Yıldızlı bir gecede yükselen dualar sizin için", KMO),
-        (21, "Miraç’ın müjdesi gönlünüze huzur getirsin", HK),
-        (28, "Mescid-i Aksa’dan semalara uzanan gece mübarek olsun", MK),
-        (34, "Uzattığımız eller rahmetle dolsun", KMO),
-        (36, "Gönülleri semaya taşıyan gece mübarek olsun", HK),
-        (39, "Pencere önünde bir mum, gönülde bir dua", MK),
-    ],
-    "berat": [
-        (2, "Ekmeğiniz bol, rızkınız helal olsun", HK),
-        (3, "Arınmış gönüllerle bir Berat gecesi dilerim", KMO),
-        (4, "Yeni yılın takdiri hayırla yazılsın", MK),
-        (10, "Ayçiçekleri gibi yüzünüz hep nura dönsün", HK),
-        (17, "Bereketiniz artsın, kısmetiniz açılsın", KMO),
-        (20, "Tövbelerle arınan gönüllere selam olsun", HK),
-        (27, "Rahmet suyuyla günahlarımız yıkansın", MK),
-        (30, "Büyüklerin duası küçüklerin üzerinde olsun", HK),
-    ],
-    "kadir": [
-        (14, "Rahmet kapıları ardına kadar açılsın", KG),
-        (16, "Her tesbih tanesi bir af vesilesi olsun", HKG),
-        (22, "Orucunuz ve duanız kabul olsun", KG),
-        (24, "Kur’an’ın sesi evinizden eksik olmasın", HKG),
-        (29, "Bu gece edilen dualar bin aya bedel olsun", KG),
-        (35, "Kâbe’ye dönen yüzler, Rabbe açılan eller", HKG),
-        (37, "Rabbim bu geceyi idrak edenlerden eylesin", KG),
-        (38, "Sessiz bir secdede kabul olan dualar dilerim", HKG),
-    ],
-    "mevlid": [
-        (0, "Bir gül açtı, âlem nura gark oldu", MV),
-        (5, "Medine’nin nuru gönlünüze dolsun", HK),
-        (9, "Yeşil Kubbe’ye selam, Efendimize salavat", MK),
-        (11, "Mekke çöllerinden doğan nur yolunuzu aydınlatsın", HK),
-        (12, "Efendimizin doğduğu gece mübarek olsun", MV),
-        (19, "Salavatlarla dolu, gül kokulu bir gece dilerim", MK),
-        (26, "Peygamber gülü gönlünüzde açsın", HK),
-        (31, "Avuçlarınız gül, dilleriniz salavat dolsun", MV),
+    "uc_aylar": [
+        (0, "Üç ayların bereketiyle gönlünüz yeşersin", HUA),
+        (1, "Kur’an’la geçen günler, nurla dolan gönüller", MUA),
+        (2, "Rahmet yağmuruyla arınan bir üç ay dilerim", UAMO),
+        (3, "Tövbeyle yeşeren gönüllere selam olsun", HUA),
+        (4, "Recep, Şaban ve Ramazan bereketle gelsin", UAMO),
+        (5, "Üç mum, üç ay, bin dua", MUA),
+        (6, "Üç ayların ilk ışığı gönlünüze doğsun", HUA),
+        (7, "Dualarımız kanatlanıp Rabbimize ulaşsın", UAMO),
+        (8, "Her tesbih tanesinde bir dua, her duada bir umut", MUA),
+        (9, "Gönüller arınsın, dualar kabul olsun", HUA),
+        (10, "Büyüklerimizin duası üzerimizden eksik olmasın", UAMO),
+        (11, "Okunan her ayet gönlünüze şifa olsun", MUA),
+        (12, "Nesilden nesile dualarla Üç Aylar", HUA),
+        (13, "Ramazan’a uzanan yolunuz hayırla dolsun", MUA),
+        (14, "Açılan eller boş dönmesin", HUA),
+        (15, "Dualarınız kabul, gönlünüz huzurlu olsun", MUA),
+        (16, "Üç ay, üç fener; yolunuz hep aydınlık olsun", MUA),
+        (17, "Rahmet aylarının ışığı evinizi aydınlatsın", HUA),
+        (18, "Lale kokulu bir Üç Aylar dilerim", HUA),
+        (19, "Rabbe yaklaştıran her adım mübarek olsun", MUA),
+        (20, "Tövbe kapısı açık, rahmet kapısı geniş", HUA),
+        (21, "Dualarınız çiçek açsın", MUA),
+        (22, "Seccadeniz bereketli, secdeniz makbul olsun", MUA),
+        (23, "Rahmet pınarından gönlünüze huzur aksın", HUA),
     ],
 }
-assert sorted(i for v in CARDS.values() for i, _, _ in v) == list(range(40))
+assert sorted(i for v in CARDS.values() for i, _, _ in v) == list(range(24))
 W, H = 1080, 1920; PH = W * 5 // 4; TOP = H - PH
 
 
@@ -108,5 +84,5 @@ for l in lines:
         if f'"id": "{last}"' in l:
             assert l.rstrip().endswith(","), last
             out += ["  " + json.dumps(r, ensure_ascii=False) + "," for r in rows]
-txt = "\n".join(out); data = json.loads(txt); assert len({t["id"] for t in data}) == len(data) == 245
+txt = "\n".join(out); data = json.loads(txt); assert len({t["id"] for t in data}) == len(data) == 269
 (REPO / "templates.json").write_text(txt, encoding="utf-8", newline="\n")
