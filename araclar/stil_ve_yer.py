@@ -21,7 +21,9 @@ STYLES = {
 }
 ROTATION = ["kitabe", "klasik", "selamOnde"]
 OVERRIDE = {"kadir_05": "klasik", "cuma_76": "klasik", "cuma_79": "klasik",  # konu yukarıdan başlıyor, iri selam ele değiyordu
-            "cuma_88": "klasik", "cuma_93": "klasik", "cuma_94": "klasik"}  # iri selam ağaca, taşa, ufka biniyordu
+            "cuma_88": "klasik", "cuma_93": "klasik", "cuma_94": "klasik",  # iri selam ağaca, taşa, ufka biniyordu
+            "kadir_08": "klasik", "kadir_11": "klasik", "kadir_13": "klasik", "kadir_15": "klasik",
+            "mevlid_14": "klasik"}  # kapı, rahle, Kâbe, pencere ışığı, eller
 G_MAX, G_LH, M_FIT, G_FIT = .86, 1.1, .92, .72
 G_LH_MULTI = {"Corinthia.ttf": .85}  # iki satırlı selamda satır yüksekliği (ScriptFont.lineHeight)
 TOP_MIN, TOP_MAX = .055, .22
