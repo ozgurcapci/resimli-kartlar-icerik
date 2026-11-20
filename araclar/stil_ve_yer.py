@@ -15,8 +15,8 @@ W, PH = 1080, 1350
 
 # Uygulamadaki CardStyle ile aynı değerler (lib/theme/card_style.dart).
 STYLES = {
-    "klasik": dict(mf="PlayfairDisplay.ttf", ms=.050, mw=420, tr=.01, lh=1.32, gf="PinyonScript.ttf", gs=.105, measure=.74, gap=.03, first="m"),
-    "kitabe": dict(mf="Marcellus.ttf", ms=.044, mw=None, tr=.06, lh=1.38, gf="Corinthia.ttf", gs=.148, measure=.72, gap=.008, first="m"),
+    "klasik": dict(mf="PlayfairDisplay.ttf", ms=.050, mw=420, tr=.01, lh=1.32, gf="PinyonScript.ttf", gs=.105, measure=.74, gap=.05, first="m"),
+    "kitabe": dict(mf="Marcellus.ttf", ms=.044, mw=None, tr=.06, lh=1.38, gf="Corinthia.ttf", gs=.148, measure=.72, gap=.02, first="m"),
     "selamOnde": dict(mf="GildaDisplay.ttf", ms=.047, mw=None, tr=.02, lh=1.32, gf="Allura.ttf", gs=.135, measure=.74, gap=.016, first="g"),
 }
 ROTATION = ["kitabe", "klasik", "selamOnde"]
