@@ -23,7 +23,8 @@ ROTATION = ["kitabe", "klasik", "selamOnde"]
 OVERRIDE = {"kadir_05": "klasik", "cuma_76": "klasik", "cuma_79": "klasik",  # konu yukarıdan başlıyor, iri selam ele değiyordu
             "cuma_88": "klasik", "cuma_93": "klasik", "cuma_94": "klasik",  # iri selam ağaca, taşa, ufka biniyordu
             "kadir_08": "klasik", "kadir_11": "klasik", "kadir_13": "klasik", "kadir_15": "klasik",
-            "mevlid_14": "klasik"}  # kapı, rahle, Kâbe, pencere ışığı, eller
+            "mevlid_14": "klasik",  # kapı, rahle, Kâbe, pencere ışığı, eller
+            "hicri_yilbasi_05": "klasik"}  # iri selam görseli çok aşağı itiyor, güvercinler kesiliyordu
 G_MAX, G_LH, M_FIT, G_FIT = .86, 1.1, .92, .72
 G_LH_MULTI = {"Corinthia.ttf": .85}  # iki satırlı selamda satır yüksekliği (ScriptFont.lineHeight)
 TOP_MIN, TOP_MAX = .055, .22
@@ -31,7 +32,8 @@ TOP_OVERRIDE = {"cuma_76": .30}  # beyaz yazı: pencerenin açık üstü yerine 
 # Gönderide yazı bloğu konuya biniyorsa görsel aşağı kaydırılır (`postAlign` < 1: kırpma penceresi
 # yukarı çıkar, alttan kesilir). Hikâyede görsel tam sığdığı için etkisi yok.
 GAP = .035  # yazı bloğuyla konu arasında bırakılan en az boşluk (gönderi boyuna oran)
-ALIGN_OVERRIDE = {"kadir_14": .75}  # suluboya lekesinde konu sezilmiyor; selam minareye değiyordu
+ALIGN_OVERRIDE = {"kadir_14": .75,  # suluboya lekesinde konu sezilmiyor; selam minareye değiyordu
+                  "hicri_yilbasi_11": .85}  # hilal gönderinin üst kenarında yarım kalıyordu
 
 
 def font(name, size, wght=None):

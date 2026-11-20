@@ -1,0 +1,59 @@
+# Hicri Yılbaşı kartları: Flow istemleri (Nano Banana Pro, 9:16, x2)
+
+20 istem: 1–10 suluboya, 11–20 gerçekçi fotoğraf. Her istem konu cümlesi + ortak kuyruk (bkz. `uc_aylar.md`).
+Tema: Hicret (Mekke'den Medine'ye yolculuk) ve yeni başlangıç. Kervan, çöl, hurmalık, Sevr mağarası (güvercin yuvası, örümcek ağı), Medine, boş yeni sayfa, şafak. Kişiler yalnız uzakta, arkadan, silüet olarak; yüz yok.
+Hicri ay yeni hilalle başladığı için 01 ve 15'te ince hilal var: bu ikisinde kuyruğun "No moon, no crescent, no stars." cümlesi "Only one thin new crescent moon, small, no stars." olur.
+
+## Suluboya
+
+**01** Hilal, Medine (gece mavisi zemin, hilalli): The silhouette of a mosque with a green dome and slender minarets low on the horizon among date palms, a thin new crescent moon small and high in the sky.
+
+**02** Kervan, şafak: A small camel caravan crossing soft golden sand dunes at dawn, low along the bottom of the image, tiny distant travelers in robes seen from behind, long gentle shadows on the sand.
+
+**03** Vaha, kuyu: An old stone well beside a small cluster of date palms in a quiet oasis, a clay water jug resting on the well's edge, gold-leaf touches on the palm fronds.
+
+**04** Sevr mağarası: The rocky entrance of a small desert cave, a pair of white doves sitting on a little nest at the opening, a delicate spider web stretched across the entrance, glinting with gold leaf.
+
+**05** Yeni sayfa: An old leather-bound book lying open to a fresh, completely blank cream page, a reed pen and a small brass inkwell beside it on a carved wooden desk.
+
+**06** Nar dalı: A branch of ripe pomegranates with glossy leaves resting on a patterned Ottoman ceramic plate, one pomegranate split open showing its ruby seeds.
+
+**07** Hurma ve su: A carved brass tray holding a small bowl of dates and a glass of water, a string of prayer beads curled beside them on a woven carpet.
+
+**08** Çöl yolu, fener: A winding sandy path leading toward distant date palms and white houses, a single brass lantern with a warm flame standing on a rock in the foreground.
+
+**09** Kuba Mescidi: A small white mosque with simple low domes and one short minaret among tall date palms, a few travelers' camels resting in its shade.
+
+**10** Hurma dalında güvercinler: A pair of white doves perched side by side on a low curving date-palm frond, clusters of golden dates hanging beneath them.
+
+## Suluboya kuyruğu (her istemin sonuna)
+
+> Full-bleed vertical watercolor painting with delicate gold-leaf accents, Ottoman-Turkish Islamic aesthetic, serene and elegant, hand-painted on textured cotton paper. Pale warm cream paper background (#F6EFE3). The background color and paper texture continue evenly all the way to every edge of the image: no blank strips, no bands, no margins, no white edges at the top or bottom. The main subject sits low in the image, grounded near the bottom edge, and does not rise above the middle of the image. The entire upper half is calm, open background with only soft watercolor washes and a few tiny gold flecks, so a greeting text can be written there later. No text, no letters, no calligraphy, no Arabic script, no numbers, no watermark, no frame or border. No glow, no halo, no lens flare. No moon, no crescent, no stars.
+
+(01 için arka plan: softly graded deep night blue from #22324A at the top to #121C2C at the bottom.)
+
+## Fotoğraf
+
+**11** Kervan silüeti: The silhouette of a short camel caravan walking along the crest of a sand dune at sunrise, low in the frame, the sky above in soft peach and pale gold.
+
+**12** Medine, şafak: A mosque with a green dome and tall minarets at dawn, seen from a distance low in the frame, the sky above a calm gradient of pale blue and soft pink.
+
+**13** Hurmalık, sabah sisi: A grove of tall date palms in light morning mist, the trunks and lower fronds low in the frame, warm sunlight filtering softly through the haze.
+
+**14** Yeni defter: A new leather notebook lying open to blank cream pages, a fountain pen and a glass of Turkish tea beside it on a wooden table, soft morning window light, no legible writing.
+
+**15** Hilal, İstanbul (hilalli): The silhouette of Istanbul's classical mosques with domes and minarets low on the horizon at dusk, a thin new crescent moon small in the clear deep-blue sky.
+
+**16** Pencerede dua: Two hands raised in prayer, palms open and upward, before a window at first light, the softly blurred rooftops and a minaret of a town outside.
+
+**17** Aralanan kapı: An old carved wooden door standing half open onto a sunlit stone courtyard with a date palm and a small fountain, warm light spilling across the threshold.
+
+**18** Kumda ayak izleri: A line of footprints in smooth golden sand leading toward distant dunes and a few palm trees at sunrise, low in the frame, gentle long shadows.
+
+**19** Kayada güvercin yuvası: A pair of white doves in a small nest tucked into a crevice of warm sandstone rock, soft afternoon light, a fine spider web catching the light at the edge.
+
+**20** İlk ışık, fener: A brass lantern with a small flame on a stone windowsill at dawn, the first light rising over a quiet old town with domes and a minaret softly blurred behind it.
+
+## Fotoğraf kuyruğu (her istemin sonuna)
+
+> Photorealistic photograph, shot on a full-frame camera with a prime lens, natural light, soft and calm color grading, high detail, serene and peaceful mood. The main subject sits low in the frame, grounded near the bottom edge, and does not rise above the middle of the image. The entire upper half is calm, open space with soft, out-of-focus or plain tones and no busy detail, so a greeting text can be written there later. The image continues naturally to every edge: no blank strips, no borders, no frame. No text, no letters, no signs, no calligraphy, no Arabic script, no watermark, no logo. No visible faces. No moon, no crescent, no stars, no lens flare.
