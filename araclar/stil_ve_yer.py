@@ -27,7 +27,7 @@ OVERRIDE = {"kadir_05": "klasik", "cuma_76": "klasik", "cuma_79": "klasik",  # k
 G_MAX, G_LH, M_FIT, G_FIT = .86, 1.1, .92, .72
 G_LH_MULTI = {"Corinthia.ttf": .85}  # iki satırlı selamda satır yüksekliği (ScriptFont.lineHeight)
 TOP_MIN, TOP_MAX = .055, .22
-TOP_OVERRIDE = {"cuma_76": .055}  # alttaki parlak bahçe yerine üstteki açık alan
+TOP_OVERRIDE = {"cuma_76": .30}  # beyaz yazı: pencerenin açık üstü yerine yeşilliğin önünde
 # Gönderide yazı bloğu konuya biniyorsa görsel aşağı kaydırılır (`postAlign` < 1: kırpma penceresi
 # yukarı çıkar, alttan kesilir). Hikâyede görsel tam sığdığı için etkisi yok.
 GAP = .035  # yazı bloğuyla konu arasında bırakılan en az boşluk (gönderi boyuna oran)
