@@ -1,0 +1,9 @@
+// Cloudflare Workers: depo kökü durağan dosya olarak yayınlanır (yalnız templates.json ve cards/;
+// gerisi .assetsignore ile dışarıda). pages.dev Türkiye'de erişime kapalı olduğu için workers.dev kullanılıyor.
+{
+  "name": "resimli-kartlar-icerik",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "."
+  }
+}
