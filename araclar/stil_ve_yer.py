@@ -28,6 +28,10 @@ G_MAX, G_LH, M_FIT, G_FIT = .86, 1.1, .92, .72
 G_LH_MULTI = {"Corinthia.ttf": .85}  # iki satırlı selamda satır yüksekliği (ScriptFont.lineHeight)
 TOP_MIN, TOP_MAX = .055, .22
 TOP_OVERRIDE = {"cuma_76": .055}  # alttaki parlak bahçe yerine üstteki açık alan
+# Gönderide yazı bloğu konuya biniyorsa görsel aşağı kaydırılır (`postAlign` < 1: kırpma penceresi
+# yukarı çıkar, alttan kesilir). Hikâyede görsel tam sığdığı için etkisi yok.
+GAP = .035  # yazı bloğuyla konu arasında bırakılan en az boşluk (gönderi boyuna oran)
+ALIGN_OVERRIDE = {"kadir_14": .75}  # suluboya lekesinde konu sezilmiyor; selam minareye değiyordu
 
 
 def font(name, size, wght=None):
@@ -132,9 +136,31 @@ def subject_top(post):
 def place(card, st, post):
     _, hb = block(card, st)
     sub = subject_top(post)
-    avail = (sub - .035) * PH - TOP_MIN * PH
+    avail = (sub - GAP) * PH - TOP_MIN * PH
     top = TOP_MIN * PH + max(0, avail - hb) * .35
     return round(min(top / PH, TOP_MAX), 3), sub, hb
+
+
+def crop_post(full, align):
+    """9:16 görselden gönderi (4:5) penceresi; align 1 = alt, 0 = üst."""
+    if full.height * 4 < full.width * 5: return full
+    y = round(align * (full.height - PH))
+    return full.crop((0, y, W, y + PH))
+
+
+def fit_post(card, st, full):
+    """Yazı konuya binmeyecek en az kaydırma: (align, top, sub, hb, post)."""
+    if card["id"] in ALIGN_OVERRIDE:
+        align = ALIGN_OVERRIDE[card["id"]]; post = crop_post(full, align)
+        return (align, *place(card, st, post), post)
+    align = 1.0
+    for _ in range(4):
+        post = crop_post(full, align)
+        top, sub, hb = place(card, st, post)
+        need = hb - ((sub - GAP) * PH - TOP_MIN * PH)  # binen px
+        if need <= 0 or align == 0: break
+        align = max(0.0, round(align - (need + .015 * PH) / (full.height - PH), 3))
+    return align, top, sub, hb, post
 
 
 def render(post, card, st, top):
@@ -157,7 +183,7 @@ def render(post, card, st, top):
 def main():
     write = "--write" in sys.argv
     lines = (REPO / "templates.json").read_text(encoding="utf-8").split("\n")
-    out, thumbs, report = [], [], []
+    out, thumbs, report, shifted = [], [], [], []
     counters = {}
     for line in lines:
         m = re.match(r'^(\s*)(\{.*\})(,?)\s*$', line)
@@ -173,25 +199,27 @@ def main():
         card.pop("greetingFont", None)
         card["style"] = st
         if card.get("image"):
-            post = Image.open(REPO / "cards" / card["image"]).convert("RGB")
-            post = post.crop((0, post.height - PH, W, post.height)) if post.height * 4 >= post.width * 5 else post
-            top, sub, hb = place(card, st, post)
+            full = Image.open(REPO / "cards" / card["image"]).convert("RGB")
+            align, top, sub, hb, post = fit_post(card, st, full)
             top = TOP_OVERRIDE.get(card["id"], top)
             card["textTop"] = top
+            if align < 1: card["postAlign"] = align; shifted.append((card["id"], align))
+            else: card.pop("postAlign", None)
             parts, _ = block(card, st)
             ml = next((len(p[1]) for p in parts if p[0] == "m"), 0)
             gl = next((len(p[1]) for p in parts if p[0] == "g"), 0)
             report.append((card["id"], st, top, round(sub, 2), ml, gl))
             th = render(post, card, st, top).resize((216, 270), Image.LANCZOS)
             dd = ImageDraw.Draw(th); dd.rectangle((0, 258, 216, 270), fill="white")
-            dd.text((3, 258), f'{card["id"]} {st[:3]} {top}', fill="red")
+            dd.text((3, 258), f'{card["id"]} {st[:3]} {top}' + (f' ↓{align}' if align < 1 else ''), fill="red")
             # konu sınırı çizgisi (yalnız önizlemede)
             dd.line((0, sub * 270, 6, sub * 270), fill="red", width=2)
             thumbs.append(th)
         keys = list(card)
-        ordered = {k: card[k] for k in keys if k not in ("style", "textTop")}
+        ordered = {k: card[k] for k in keys if k not in ("style", "textTop", "postAlign")}
         ordered["style"] = card["style"]
         if "textTop" in card: ordered["textTop"] = card["textTop"]
+        if "postAlign" in card: ordered["postAlign"] = card["postAlign"]
         out.append(m.group(1) + json.dumps(ordered, ensure_ascii=False) + m.group(3))
     txt = "\n".join(out); json.loads(txt)
     if write:
@@ -207,6 +235,7 @@ def main():
     print("3+ satır:", [r for r in report if r[4] > 2])
     print("üstte (konu yakın):", [r[0] for r in report if r[2] <= TOP_MIN + .001][:60])
     print("sayfa:", (len(thumbs) + per - 1) // per)
+    print(f"aşağı kaydırılan ({len(shifted)}):", shifted)
 
 
 main()
