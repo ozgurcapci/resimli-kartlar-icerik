@@ -90,3 +90,87 @@ Her istem = konu cümlesi + kuyruk. Kırpmadan ya da yüzdeden söz etmeyin.
 **118** Yağmur: Raindrops on a window glass in close-up, through it the domes and a minaret of a mosque softly blurred low in the frame, cozy grey-blue tones, soft overcast light above.
 
 **119** Manolya: Close-up of a branch with large white magnolia blossoms, low in the frame, soft spring light, a pale pink and cream bokeh above.
+
+## Doğa seti (manzara, şelale, dere; kuyruk aynı)
+
+**120** Şelale: A wide, gentle waterfall cascading over mossy rocks into a clear green pool in a lush forest, only the lower falls and the pool in the frame, soft white mist rising and filling the upper half.
+
+**121** Orman deresi: A clear mountain stream flowing over smooth round stones through a green forest, low in the frame, silky water from a slow shutter, soft morning light and a hazy green canopy above.
+
+**122** Taş köprü: An old Ottoman stone arch bridge over a calm river in a green valley, the bridge low in the frame and reflected in the water, soft pale morning sky above.
+
+**123** Basamaklı şelale: Small terraced waterfalls of turquoise water flowing over white limestone steps, low in the frame, soft daylight, a pale blue sky with thin haze above.
+
+**124** Sisli vadi: A misty green valley at sunrise with layers of rolling hills fading into the fog, a small village with a white minaret tucked at the bottom, a soft golden sky above.
+
+**125** Kuzey Karadeniz yaylası: Lush green highland meadow with scattered wooden houses and a small wooden mosque, low in the frame, clouds of soft fog drifting over the slopes above.
+
+**126** Göl kıyısında ağaç: A lone tree on the grassy shore of a still mountain lake at dawn, low in the frame with its reflection in the water, a calm pale peach and blue sky above.
+
+**127** Kır çiçekleri: A meadow of red poppies and white daisies swaying in a light breeze, low in the frame, very shallow depth of field, a soft blurred spring sky above.
+
+**128** Çam ormanı, ışık: Soft morning sunbeams falling through a pine forest onto a mossy forest floor with ferns, the ground low in the frame, a gentle hazy light above.
+
+**129** Kanyon nehri: A calm emerald river winding through the bottom of a deep rocky canyon, low in the frame, soft diffused light, a narrow strip of pale sky and mist above.
+
+**130** Deniz, kayalar: Gentle turquoise sea waves washing over smooth rocks on a quiet Aegean shore, low in the frame, soft evening light, a clear pale sky above.
+
+**131** Pamukkale: White travertine terraces filled with pale blue water at sunset, low in the frame, warm reflections, a soft pink and lilac sky above.
+
+**132** Çay bahçeleri: Rows of green tea plantations on rolling hillsides in the Black Sea region, low in the frame, light morning mist, a soft white sky above.
+
+**133** Sonbahar deresi: A small stream flowing among rocks covered with fallen orange and yellow autumn leaves, low in the frame, soft overcast light, blurred golden trees above.
+
+**134** Karlı dağ, çam: Snow-covered pine trees in a quiet winter forest at the foot of a mountain, low in the frame, soft falling snow, a pale grey-blue sky above.
+
+**135** Gün doğumu, deniz: The calm sea at sunrise with gentle ripples and the silhouette of a distant coastline with a small mosque, low in the frame, a warm soft orange and pink sky above.
+
+**136** Çiğli çimen: Close-up of fresh green grass with dewdrops sparkling in early morning light, low in the frame, very shallow depth of field, a soft green and gold bokeh above.
+
+**137** Kiraz çiçekleri, dere: Blossoming cherry trees leaning over a quiet stream in spring, low in the frame, white petals floating on the water, a soft pale pink sky above.
+
+**138** Bozkır, yalnız ağaç: A single old oak tree on golden rolling steppe hills in late afternoon light, low in the frame, a wide calm pale blue sky above.
+
+**139** Göl, kamışlar: Tall reeds at the edge of a misty lake in early morning, a small wooden rowing boat resting on the water, low in the frame, a soft silver sky above.
+
+## Çiçek ve kuş seti (kuyruk aynı)
+
+**140** Şakayık: Close-up of soft pink peonies in full bloom with a few buds, low in the frame, very shallow depth of field, a soft blush and cream bokeh above.
+
+**141** Sümbül: Blue and purple hyacinths blooming in a garden bed, low in the frame, soft spring morning light, a pale lilac and green bokeh above.
+
+**142** Beyaz orkide: A branch of white orchids in a simple ceramic pot on a windowsill, low in the frame, soft diffused light, a blurred warm cream wall above.
+
+**143** Kardelen: A small cluster of white snowdrops pushing through thin melting snow, low in the frame, close-up, a soft pale blue-white bokeh above.
+
+**144** Ortanca: Large blue and violet hydrangea blooms with green leaves, low in the frame, soft overcast light, a muted blue-green bokeh above.
+
+**145** Yasemin: Close-up of a branch of white jasmine flowers climbing an old stone wall, low in the frame, soft evening light, a warm blurred background above.
+
+**146** Nilüfer: A pink water lily blooming on a still pond among round green leaves, low in the frame, gentle reflections, soft blurred green water above.
+
+**147** Mor salkım: Hanging clusters of purple wisteria in soft focus at the bottom of the frame, a pale lilac and white bokeh filling the upper half.
+
+**148** Fulya ve nergis: A bunch of yellow daffodils in a small glass jar on a wooden table, low in the frame, soft morning window light, a blurred cream background above.
+
+**149** Kır çiçekleri buketi: A loose bouquet of wildflowers, cornflowers, chamomile and wild poppies, lying on a linen cloth, low in the frame, soft natural light, plain warm background above.
+
+**150** Bülbül, gül: A nightingale perched on a branch of a red rose bush, low in the frame, singing softly, very shallow depth of field, a soft green bokeh above.
+
+**151** Kızılgerdan: A small robin perched on a mossy branch with a few white blossoms, low in the frame, soft morning light, a pale warm bokeh above.
+
+**152** Mavi baştankara: A blue tit perched on a flowering apple branch, low in the frame, close-up, soft spring light, a pale pink and green bokeh above.
+
+**153** Arıkuşu: A colorful European bee-eater perched on a thin dry branch, low in the frame, warm golden light, a soft blurred sky above.
+
+**154** Kuyruksallayan: A small white wagtail standing on a smooth stone at the edge of a clear stream, low in the frame, soft reflections, a blurred green background above.
+
+**155** Flamingolar: A group of pink flamingos wading in calm shallow water at sunrise, low in the frame, soft reflections, a pale pink and gold sky above.
+
+**156** Turnalar: A few grey cranes standing in a misty wetland at dawn, low in the frame, soft silhouettes, a calm pale silver sky above.
+
+**157** Serçeler, karda: Two small sparrows sitting close together on a snowy branch, low in the frame, soft winter light, a pale blue-grey bokeh above.
+
+**158** Kumrular, çatı: A pair of turtle doves sitting side by side on the edge of an old tiled roof, low in the frame, warm afternoon light, a soft blurred sky above.
+
+**159** Ispinoz, kiraz: A chaffinch perched among white cherry blossoms, low in the frame, close-up, soft spring light, a pale pink and white bokeh above.

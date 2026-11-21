@@ -60,3 +60,45 @@ Uygulamada görsel gönderide (4:5) alta hizalı kırpılır, üstü kesilir. Me
 Aynı kuyruk; "Pale cream paper background" yerine koyu degrade zemin ve "calm, open **dark** background … so a **light** greeting text can be written there later". Kullanılan zeminler: koyu adaçayı yeşili #2F5D50→#1F4038, gece mavisi #22324A→#121C2C, bordo #4A1E2A→#2E1119, koyu turkuaz #1F4A4A→#123030, mor #3A2340→#22142A. Yazı rengi krem #FFF8E7.
 
 Konular: beyaz güller ve inci tesbih, fenerler ve yasemin, zeytin dalı ve yasemin, nar, pirinç kandil, tesbih ve zambak.
+
+## Suluboya, doğa seti (D01–D20; kuyruk aynı, bazılarında zemin: sage #E4EBDD→#C9D6C0, sky #EEF3F6→#D6E3EA, dusk #F4DCC8→#E6BBA8, night #22324A→#121C2C)
+
+**D01** Şelale (sage): A gentle waterfall flowing over mossy rocks into a small clear pool, ferns and wildflowers around it, only the lower falls in the image.
+
+**D02** Dere ve taş köprü: A small Ottoman stone arch bridge over a quiet stream, willow branches hanging over the water.
+
+**D03** Orman deresi (sage): A clear stream winding among smooth stones and green ferns in a forest, a few white flowers on the bank.
+
+**D04** Sisli vadi, köy camisi: A small village mosque with a single minaret tucked among green hills, soft morning mist drifting low over the valley.
+
+**D05** Gölde kayık (sky): A small wooden rowing boat resting on a calm lake among tall reeds, soft reflections in the water.
+
+**D06** Gelincik tarlası: A meadow of red poppies and white daisies rising from the bottom edge, a few stems swaying.
+
+**D07** Kiraz ağacı, dere: A blossoming cherry tree leaning over a small stream, pale pink petals floating on the water.
+
+**D08** Karlı köy (sky): A small snow-covered village with a little mosque and a few wooden houses, soft smoke from the chimneys, quiet winter scene.
+
+**D09** Sonbahar yaprakları: A small stream flowing between rocks covered with fallen orange and golden autumn leaves, a maple branch above it.
+
+**D10** Yayla evi (sage): A wooden highland house and a small wooden mosque on a green slope with grazing sheep far away, soft fog low on the hills.
+
+**D11** Deniz kıyısı (sky): Gentle turquoise waves washing over smooth rocks on a quiet shore, a few white seagulls in the distance.
+
+**D12** Akşam, cami ve göl (dusk): A small Ottoman mosque with a dome and one minaret on the shore of a calm lake, its reflection in the water.
+
+**D13** Su değirmeni: An old stone water mill with a wooden wheel beside a little stream, wildflowers along the bank.
+
+**D14** Çay bahçeleri (sage): Rows of green tea bushes on gentle rolling hills, a small path winding between them.
+
+**D15** Bozkırda meşe: A single old oak tree on golden rolling hills, a few wildflowers at its roots.
+
+**D16** Gece, şadırvan (night): A small marble ablution fountain (şadırvan) in a mosque courtyard with a brass lantern glowing beside it.
+
+**D17** Nergisler: A cluster of white and yellow narcissus flowers rising from the bottom edge with long green leaves.
+
+**D18** Begonvil, kapı: An old wooden door of a stone house framed by magenta bougainvillea, a few potted geraniums on the step.
+
+**D19** Kuşlar ve dal: Two small goldfinches perched on a flowering almond branch, white blossoms around them.
+
+**D20** Pınar başı: A small stone spring fountain (pınar) in a green meadow, clear water flowing into a stone trough, a plane tree beside it.
