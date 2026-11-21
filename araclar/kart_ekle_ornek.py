@@ -1,6 +1,6 @@
 """İndirilenler'deki görseller (mtime sırası) → 9:16 → CARDS'taki kategorilere; her kategorinin son kartının ardına eklenir.
 
-Son kullanım: Hicri Yılbaşı için 24 görsel (hicri_yilbasi_01–24); eski degrade kartlar (DROP) silindi."""
+Son kullanım: Aşure için 7 görsel (asure_39–45), yeniden üretilen sade üstlü fotoğraflar."""
 import io, json
 from pathlib import Path
 from PIL import Image, ImageStat
@@ -8,41 +8,24 @@ from PIL import Image, ImageStat
 DL = Path.home() / "Downloads"
 REPO = Path("E:/yedek/Vibe Coding/Claude/apps/resimli-kartlar-icerik")
 FILES = sorted(DL.glob("*_2K.jpg"), key=lambda f: (f.stat().st_mtime, f.name))
-assert len(FILES) == 24, len(FILES)
-HHY, HYMO, MHY = "Hayırlı Hicri Yıllar", "Hicri Yılbaşınız Mübarek Olsun", "Mübarek Hicri Yılbaşı"
-START = {"hicri_yilbasi": 1}  # yoksa kategorinin en büyük numarası + 1
-DROP = {"hicri_01", "hicri_02"}  # silinecek eski kartlar
-TOTAL = 288
+assert len(FILES) == 7, len(FILES)
+AGM, HA, MAG = "Aşure Gününüz Mübarek Olsun", "Hayırlı Aşureler", "Mübarek Aşure Günü"
+START = {}  # yoksa kategorinin en büyük numarası + 1
+DROP = set()  # silinecek eski kartlar
+TOTAL = 327
 # kategori → [(görsel sırası, mesaj, selam)]
 CARDS = {
-    "hicri_yilbasi": [
-        (0, "Hicretin ruhu yeni yılınıza yol göstersin", HHY),
-        (1, "Medine’nin nuru yeni yılınızı aydınlatsın", HYMO),
-        (2, "Hayra giden her yolculuk mübarek olsun", MHY),
-        (3, "Güvercin yuvası gibi huzurlu bir yıl dilerim", HHY),
-        (4, "Allah’ın koruması yeni yılda da üzerinizde olsun", HYMO),
-        (5, "Her adımı hayra açılan bir yıl olsun", MHY),
-        (6, "Yeni yılda adımlarınız bereketli olsun", HHY),
-        (7, "Yeni yıl hayır kapılarını size açsın", HYMO),
-        (8, "Rahmet kapıları ardına kadar açık olsun", MHY),
-        (9, "Yeni yılın ilk duası kabul olsun", HHY),
-        (10, "Yeni hilalle gelen yıl hayırlar getirsin", HYMO),
-        (11, "İlk ışıkla gelen yıl umut dolsun", MHY),
-        (12, "Yolunuzu aydınlatan bir yıl dilerim", HHY),
-        (13, "Vahada su gibi ferahlatan bir yıl olsun", HYMO),
-        (14, "Hicret yolunun bereketi üzerinize olsun", MHY),
-        (15, "Sabırla yürünen yollar hayırla biter", HHY),
-        (16, "Muharrem hilaliyle yeni yıl mübarek olsun", HYMO),
-        (17, "Yeni yıl, yeni niyet, yeni umut", MHY),
-        (18, "Sulh ve huzur dolu bir yıl dilerim", HHY),
-        (19, "İlk mescidin huzuru evinize dolsun", HYMO),
-        (20, "Secdeleriniz huzur, yılınız bereket olsun", MHY),
-        (21, "Yeni yılda yolunuz nurla aydınlansın", HHY),
-        (22, "Rabbim yolunuzu kolaylaştırsın", HYMO),
-        (23, "Sofranız bereketli, yılınız hayırlı olsun", MHY),
+    "asure": [
+        (0, "Rızkınız bol, bereketiniz daim olsun", AGM),
+        (1, "Bir kase aşureyle bin gönül şenlensin", HA),
+        (2, "Tatlı sohbetler, bereketli sofralar dilerim", MAG),
+        (3, "Merhametle paylaşılan her lokma bereket olsun", AGM),
+        (4, "Sofralarımız paylaştıkça bereketlensin", HA),
+        (5, "Gönülleriniz aşure gibi tatlı ve renkli olsun", MAG),
+        (6, "Bu güzel günde dualarda buluşalım", AGM),
     ],
 }
-assert sorted(i for v in CARDS.values() for i, _, _ in v) == list(range(24))
+assert sorted(i for v in CARDS.values() for i, _, _ in v) == list(range(7))
 W, H = 1080, 1920; PH = W * 5 // 4; TOP = H - PH
 
 
@@ -85,7 +68,10 @@ for l in lines:
     if not any(f'"id": "{d}"' in l for d in DROP): out.append(l)
     for last, rows in new.items():
         if f'"id": "{last}"' in l:
-            assert l.rstrip().endswith(","), last
-            out += ["  " + json.dumps(r, ensure_ascii=False) + "," for r in rows]
+            add = ["  " + json.dumps(r, ensure_ascii=False) + "," for r in rows]
+            if not l.rstrip().endswith(","):  # dizinin son kartı: yeni sonuncu virgülsüz olur
+                if out and out[-1] == l: out[-1] = l.rstrip() + ","
+                add[-1] = add[-1].rstrip(",")
+            out += add
 txt = "\n".join(out); data = json.loads(txt); assert len({t["id"] for t in data}) == len(data) == TOTAL
 (REPO / "templates.json").write_text(txt, encoding="utf-8", newline="\n")

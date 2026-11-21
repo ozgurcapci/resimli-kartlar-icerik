@@ -20,7 +20,8 @@ STYLES = {
     "selamOnde": dict(mf="GildaDisplay.ttf", ms=.047, mw=None, tr=.02, lh=1.32, gf="Allura.ttf", gs=.135, measure=.74, gap=.016, first="g"),
 }
 ROTATION = ["kitabe", "klasik", "selamOnde"]
-OVERRIDE = {"kadir_05": "klasik", "cuma_76": "klasik", "cuma_79": "klasik",  # konu yukarıdan başlıyor, iri selam ele değiyordu
+OVERRIDE = {"asure_28": "selamOnde",  # kitabe selamı ahşabın üstüne düşüp okunmuyordu
+            "kadir_05": "klasik", "cuma_76": "klasik", "cuma_79": "klasik",  # konu yukarıdan başlıyor, iri selam ele değiyordu
             "cuma_88": "klasik", "cuma_93": "klasik", "cuma_94": "klasik",  # iri selam ağaca, taşa, ufka biniyordu
             "kadir_08": "klasik", "kadir_11": "klasik", "kadir_13": "klasik", "kadir_15": "klasik",
             "mevlid_14": "klasik",  # kapı, rahle, Kâbe, pencere ışığı, eller
