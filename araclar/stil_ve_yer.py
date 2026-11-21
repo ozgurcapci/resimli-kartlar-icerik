@@ -198,7 +198,8 @@ def main():
             if card.get(k): card[k] = card[k].replace("'", "’")
         i = counters.get(cat, 0); counters[cat] = i + 1
         offset = sorted(STYLES).index(ROTATION[0]) + len(cat)  # kategoriye göre farklı başlangıç
-        st = OVERRIDE.get(card["id"], ROTATION[(i + offset) % 3])
+        # Düzeni olan kart onu korur (kart silinip taşınınca ötekiler kaymasın); sıra yalnız yeni kartlara.
+        st = OVERRIDE.get(card["id"]) or card.get("style") or ROTATION[(i + offset) % 3]
         card.pop("greetingFont", None)
         card["style"] = st
         if card.get("image"):
