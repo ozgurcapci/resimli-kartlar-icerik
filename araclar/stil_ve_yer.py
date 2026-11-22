@@ -18,8 +18,17 @@ STYLES = {
     "klasik": dict(mf="PlayfairDisplay.ttf", ms=.050, mw=420, tr=.01, lh=1.32, gf="PinyonScript.ttf", gs=.105, measure=.74, gap=.05, first="m"),
     "kitabe": dict(mf="Marcellus.ttf", ms=.044, mw=None, tr=.06, lh=1.38, gf="Corinthia.ttf", gs=.148, measure=.72, gap=.02, first="m"),
     "selamOnde": dict(mf="GildaDisplay.ttf", ms=.047, mw=None, tr=.02, lh=1.32, gf="Allura.ttf", gs=.135, measure=.74, gap=.016, first="g"),
+    "zarif": dict(mf="BodoniModa.ttf", ms=.046, mw=450, tr=.01, lh=1.32, gf="Parisienne.ttf", gs=.115, measure=.74, gap=.03, first="m"),
+    "roma": dict(mf="Cinzel.ttf", ms=.036, mw=450, tr=.05, lh=1.4, gf="MonteCarlo.ttf", gs=.14, measure=.76, gap=.03, first="m", upper=True),
+    "sicak": dict(mf="Lora.ttf", ms=.046, mw=450, tr=0, lh=1.32, gf="DancingScript.ttf", gs=.115, measure=.74, gap=.03, first="m"),
+    "asil": dict(mf="LibreBaskerville.ttf", ms=.040, mw=400, tr=0, lh=1.38, gf="AlexBrush.ttf", gs=.125, measure=.74, gap=.03, first="m"),
+    "modern": dict(mf="JosefinSans.ttf", ms=.043, mw=400, tr=.06, lh=1.34, gf="Sacramento.ttf", gs=.13, measure=.74, gap=.016, first="g"),
+    "gosterisli": dict(mf="DMSerifDisplay.ttf", ms=.046, mw=None, tr=.01, lh=1.28, gf="ImperialScript.ttf", gs=.145, measure=.74, gap=.016, first="g"),
+    "sade": dict(mf="Cardo.ttf", ms=.050, mw=None, tr=0, lh=1.32, gf="BonheurRoyale.ttf", gs=.15, measure=.74, gap=.03, first="m"),
+    "retro": dict(mf="Spectral.ttf", ms=.046, mw=None, tr=0, lh=1.32, gf="GrandHotel.ttf", gs=.12, measure=.74, gap=.016, first="g"),
 }
-ROTATION = ["kitabe", "klasik", "selamOnde"]
+# Kategori içinde sırayla döner; yan yana gelen kartlar farklı görünsün diye karışık sıra.
+ROTATION = ["kitabe", "zarif", "selamOnde", "sicak", "roma", "modern", "klasik", "gosterisli", "asil", "retro", "sade"]
 OVERRIDE = {"asure_28": "selamOnde",  # kitabe selamı ahşabın üstüne düşüp okunmuyordu
             "kadir_05": "klasik", "cuma_76": "klasik", "cuma_79": "klasik",  # konu yukarıdan başlıyor, iri selam ele değiyordu
             "cuma_88": "klasik", "cuma_93": "klasik", "cuma_94": "klasik",  # iri selam ağaca, taşa, ufka biniyordu
@@ -27,7 +36,9 @@ OVERRIDE = {"asure_28": "selamOnde",  # kitabe selamı ahşabın üstüne düş�
             "mevlid_14": "klasik",  # kapı, rahle, Kâbe, pencere ışığı, eller
             "hicri_yilbasi_05": "klasik"}  # iri selam görseli çok aşağı itiyor, güvercinler kesiliyordu
 G_MAX, G_LH, M_FIT, G_FIT = .86, 1.1, .92, .72
-G_LH_MULTI = {"Corinthia.ttf": .85}  # iki satırlı selamda satır yüksekliği (ScriptFont.lineHeight)
+G_LH_MULTI = {"Corinthia.ttf": .85, "MonteCarlo.ttf": .95, "AlexBrush.ttf": .95, "BonheurRoyale.ttf": .95,
+              "ImperialScript.ttf": .9}
+G_WS = {"MonteCarlo.ttf": .12, "ImperialScript.ttf": .12}  # ek kelime aralığı, em (ScriptFont.wordSpacing)  # iki satırlı selamda satır yüksekliği (ScriptFont.lineHeight)
 TOP_MIN, TOP_MAX = .055, .22
 TOP_OVERRIDE = {"cuma_76": .30}  # beyaz yazı: pencerenin açık üstü yerine yeşilliğin önünde
 # Gönderide yazı bloğu konuya biniyorsa görsel aşağı kaydırılır (`postAlign` < 1: kırpma penceresi
@@ -40,20 +51,25 @@ ALIGN_OVERRIDE = {"kadir_14": .75,  # suluboya lekesinde konu sezilmiyor; selam 
 def font(name, size, wght=None):
     f = ImageFont.truetype(str(FONTS / name), max(1, round(size)))
     if wght:
-        f.set_variation_by_axes([wght])
+        axes = f.get_variation_axes()  # yalnız wght'i ayarla (Bodoni Moda'da opsz de var)
+        f.set_variation_by_axes([wght if a["name"] in (b"Weight", "Weight") else a["default"] for a in axes])
     return f
 
 
+def upper_tr(t):
+    return t.replace("i", "İ").replace("ı", "I").upper()
+
+
 class Face:
-    def __init__(self, name, size, wght=None, tr=0.0, lh=1.25):
-        self.name, self.size, self.wght, self.tr, self.lh = name, size, wght, tr, lh
+    def __init__(self, name, size, wght=None, tr=0.0, lh=1.25, ws=0.0):
+        self.name, self.size, self.wght, self.tr, self.lh, self.ws = name, size, wght, tr, lh, ws
         self.f = font(name, size, wght)
 
     def scaled(self, k):
-        return Face(self.name, self.size * k, self.wght, self.tr, self.lh)
+        return Face(self.name, self.size * k, self.wght, self.tr, self.lh, self.ws)
 
     def width(self, t):  # Flutter letterSpacing her harften sonra eklenir
-        return self.f.getlength(t) + self.size * self.tr * len(t)
+        return self.f.getlength(t) + self.size * self.tr * len(t) + self.size * self.ws * t.count(" ")
 
 
 def balance(words, maxw, face):
@@ -92,8 +108,9 @@ def lay(kind, text, st):
     s = STYLES[st]
     if kind == "m":
         face = Face(s["mf"], W * s["ms"], s["mw"], s["tr"], s["lh"]); maxw = W * s["measure"]; fit = M_FIT
+        if s.get("upper"): text = upper_tr(text)
     else:
-        face = Face(s["gf"], W * s["gs"], None, 0, G_LH); maxw = W * G_MAX; fit = G_FIT
+        face = Face(s["gf"], W * s["gs"], None, 0, G_LH, G_WS.get(s["gf"], 0)); maxw = W * G_MAX; fit = G_FIT
     nat = face.width(text)
     lines = [text]
     if nat > maxw:
@@ -174,7 +191,7 @@ def render(post, card, st, top):
         for i, l in enumerate(lines):
             cy = y + lh * (i + .5); x = W / 2 - face.width(l) / 2
             for ch in l:
-                d.text((x, cy), ch, font=face.f, fill=color, anchor="lm"); x += face.f.getlength(ch) + face.size * face.tr
+                d.text((x, cy), ch, font=face.f, fill=color, anchor="lm"); x += face.f.getlength(ch) + face.size * face.tr + (face.size * face.ws if ch == " " else 0)
         y += h + STYLES[st]["gap"] * W
     r, g_, b = (int(color[i:i + 2], 16) for i in (1, 3, 5))
     if (0.2126 * r + 0.7152 * g_ + 0.0722 * b) / 255 > .45:  # açık yazıya hafif gölge (uygulamadaki gibi)
@@ -199,7 +216,9 @@ def main():
         i = counters.get(cat, 0); counters[cat] = i + 1
         offset = sorted(STYLES).index(ROTATION[0]) + len(cat)  # kategoriye göre farklı başlangıç
         # Düzeni olan kart onu korur (kart silinip taşınınca ötekiler kaymasın); sıra yalnız yeni kartlara.
-        st = OVERRIDE.get(card["id"]) or card.get("style") or ROTATION[(i + offset) % 3]
+        # --rotate: var olan düzenleri de yeniden dağıt (yeni düzenler eklendiğinde bir kez).
+        kept = None if "--rotate" in sys.argv else card.get("style")
+        st = OVERRIDE.get(card["id"]) or kept or ROTATION[(i + offset) % len(ROTATION)]
         card.pop("greetingFont", None)
         card["style"] = st
         if card.get("image"):
