@@ -1,6 +1,6 @@
 """İndirilenler'deki görseller (mtime sırası) → 9:16 → CARDS'taki kategorilere; her kategorinin son kartının ardına eklenir.
 
-Son kullanım: Sabah için 37 görsel (sabah_04–40; eski degrade sabah_01–03 silindi)."""
+Son kullanım: Gece için 37 görsel (gece_04–40; eski degrade gece_01–03 silindi)."""
 import io, json
 from pathlib import Path
 from PIL import Image, ImageStat
@@ -9,52 +9,52 @@ DL = Path.home() / "Downloads"
 REPO = Path("E:/yedek/Vibe Coding/Claude/apps/resimli-kartlar-icerik")
 FILES = sorted(DL.glob("*_2K.jpg"), key=lambda f: (f.stat().st_mtime, f.name))
 assert len(FILES) == 37, len(FILES)
-HS, GA, GB = "Hayırlı Sabahlar", "Günaydın", "Güne Bismillah"
-START = {"sabah": 4}  # yoksa kategorinin en büyük numarası + 1
+HG, IG, AR = "Hayırlı Geceler", "İyi Geceler", "Allah Rahatlık Versin"
+START = {"gece": 4}  # yoksa kategorinin en büyük numarası + 1
 PREFIX = {"ramazan": "ramazan_ayi"}  # kimlik öneki kategori anahtarından farklıysa
-DROP = {"sabah_01", "sabah_02", "sabah_03"}  # silinecek eski kartlar
+DROP = {"gece_01", "gece_02", "gece_03"}  # silinecek eski kartlar
 SKIP = set()  # kullanılmayan görseller
-TOTAL = 452
+TOTAL = 486
 # kategori → [(görsel sırası, mesaj, selam)]
 CARDS = {
-    "sabah": [
-        (0, "Lale gibi zarif, çiy gibi taze bir sabah dilerim", GA),
-        (1, "Bir fincan kahve, bir tutam huzur dilerim", HS),
-        (2, "Güneşle uyanan gönüllere aydınlık bir gün", GA),
-        (3, "Sofranız taze ekmek gibi bereketli olsun", HS),
-        (4, "Kuş sesleriyle uyanılan huzurlu bir sabah dilerim", GA),
-        (5, "Demli bir çay, güzel bir manzara, huzurlu bir gün", GA),
-        (6, "Simit kokulu, çayı demli bir sabah dilerim", HS),
-        (7, "Kahvaltınız bereketli, gününüz neşeli olsun", HS),
-        (8, "Şehrin üstüne doğan güneş gönlünüze de doğsun", GA),
-        (9, "Durgun su gibi sakin bir sabah dilerim", HS),
-        (10, "Serçeler kadar neşeli bir güne uyanın", GA),
-        (11, "Kahvesi köpüklü, sohbeti tatlı bir sabah dilerim", HS),
-        (12, "Sofranız bereketli, sohbetiniz bol olsun", HS),
-        (13, "Çay ve simitle güzel bir güne merhaba", GA),
-        (14, "Güzel bir günün kapıları size açılsın", HS),
-        (15, "Gül kokulu bir sabah, güler yüzlü bir gün dilerim", GA),
-        (16, "Sabah ezanıyla başlayan gününüz bereketli olsun", GB),
-        (17, "Pencerenizden huzur, kapınızdan bereket girsin", GA),
-        (18, "Çiçek dolu yollarda güzel bir gün dilerim", GA),
-        (19, "Güvercin kanadında selamımız size gelsin", HS),
-        (20, "Semaver kaynasın, sohbet hiç bitmesin", GA),
-        (21, "Bahçenin bereketi sofranızdan eksik olmasın", HS),
-        (22, "Taze çay yaprağı gibi canlı bir gün dilerim", GA),
-        (23, "Dalga sesi, çay buharı ve huzurlu bir sabah", GA),
-        (24, "Sulanan çiçekler gibi gönlünüz yeşersin", HS),
-        (25, "Ağaçlardan süzülen ışık yolunuzu aydınlatsın", GB),
-        (26, "Yayla havası gibi ferah bir gün dilerim", GA),
-        (27, "Lavanta kokulu, sakin bir sabah dilerim", HS),
-        (28, "Dalında kiraz gibi tatlı bir gün dilerim", GA),
-        (29, "Her damla çiy yeni bir umut olsun", HS),
-        (30, "Sisli dağlardan size güzel bir sabah selamı", GA),
-        (31, "Güneşli bir pencere, tatlı bir uyanış dilerim", GA),
-        (32, "Çaydanlık kaynadı, güzel bir gün başlasın", GB),
-        (33, "Bal gibi tatlı, kaymak gibi yumuşak bir gün dilerim", GA),
-        (34, "Portakal bahçesi gibi ferah ve bereketli bir gün", HS),
-        (35, "Köy kahvaltısı tadında güzel bir gün dilerim", HS),
-        (36, "Deniz kadar geniş, ufuk kadar aydınlık bir gün dilerim", GA),
+    "gece": [
+        (0, "Battaniye sıcaklığında huzurlu bir uyku dilerim", IG),
+        (1, "Ateşböcekleri kadar parlak rüyalar dilerim", HG),
+        (2, "Dalgaların sesiyle dinlendiren bir gece dilerim", HG),
+        (3, "Fenerler yolunuzu, dualar gönlünüzü aydınlatsın", HG),
+        (4, "Karlı gecelerde sıcacık bir yuva dilerim", IG),
+        (5, "Ay ışığı gibi sakin bir gece dilerim", AR),
+        (6, "Şehrin ışıkları sönerken gönlünüz huzurla dolsun", HG),
+        (7, "Yıldızlar kadar umutlu bir yarın dilerim", IG),
+        (8, "Bir bardak ıhlamur, deliksiz bir uyku dilerim", IG),
+        (9, "Mum ışığı gibi yumuşak bir gece dilerim", HG),
+        (10, "Gece sefaları gibi açan güzel rüyalar dilerim", IG),
+        (11, "Hilalin altında huzurla uyuyun", HG),
+        (12, "Pencerenizden yıldızlar, gönlünüzden dualar eksik olmasın", HG),
+        (13, "Mışıl mışıl, tatlı bir uyku dilerim", IG),
+        (14, "Durgun göl gibi sakin bir gece dilerim", HG),
+        (15, "Yasemin kokulu, huzurlu bir gece dilerim", IG),
+        (16, "Ihlamur kokulu sohbetlerle güzel bir gece", HG),
+        (17, "Kar beyazı, pamuk gibi bir uyku dilerim", IG),
+        (18, "Gece okunan dualar sabaha nur olsun", AR),
+        (19, "Kuşlar gibi rahat, tatlı bir uyku dilerim", IG),
+        (20, "Şehir uyurken dualarımız sizinle olsun", HG),
+        (21, "Semaver başında güzel bir gece dilerim", IG),
+        (22, "Deniz feneri gibi yolunuz hep aydınlık olsun", HG),
+        (23, "Ateşin sıcaklığı, yıldızların huzuru sizinle olsun", IG),
+        (24, "Çamların fısıltısıyla huzurlu bir gece dilerim", HG),
+        (25, "Evinizin ışığı hiç sönmesin", AR),
+        (26, "Yatsı duasıyla huzur dolu bir gece dilerim", AR),
+        (27, "Çöl gecesi kadar dingin bir gönül dilerim", HG),
+        (28, "Köprünün ışıkları gibi umutlarınız parlasın", IG),
+        (29, "Eski sokakların sessizliği gibi derin bir uyku dilerim", IG),
+        (30, "Limanına dönen kayık gibi huzurla dinlenin", HG),
+        (31, "Lavanta kokulu, deliksiz bir uyku dilerim", IG),
+        (32, "Yıldızların yansıdığı göl gibi berrak rüyalar dilerim", HG),
+        (33, "Peri bacalarının sessizliğinde güzel bir gece dilerim", IG),
+        (34, "Son çay, son dua; huzurlu bir gece dilerim", HG),
+        (35, "Dağ evinin sessizliği gibi rahat bir uyku dilerim", IG),
+        (36, "Lamba ışığında tatlı bir gece dilerim", AR),
     ],
 }
 assert sorted(i for v in CARDS.values() for i, _, _ in v) == sorted(set(range(37)) - SKIP)

@@ -35,6 +35,9 @@ OVERRIDE = {"asure_28": "selamOnde",  # kitabe selamı ahşabın üstüne düş�
             "kadir_08": "klasik", "kadir_11": "klasik", "kadir_13": "klasik", "kadir_15": "klasik",
             "mevlid_14": "klasik",  # kapı, rahle, Kâbe, pencere ışığı, eller
             "hicri_yilbasi_05": "klasik"}  # iri selam görseli çok aşağı itiyor, güvercinler kesiliyordu
+# Büyük A'sı okunmayan el yazıları: Grand Hotel'de küçük "a", Alex Brush'ta "C" gibi ("Allah", "Arefe", "Aşure").
+# Selamında büyük A olan kart bu düzenlere düşerse aynı sıradaki (selam üstte / mesaj üstte) başka düzene geçer.
+A_SWAP = {"retro": "modern", "asil": "zarif"}
 G_MAX, G_LH, M_FIT, G_FIT = .86, 1.1, .92, .72
 G_LH_MULTI = {"Corinthia.ttf": .85, "MonteCarlo.ttf": .95, "AlexBrush.ttf": .95, "BonheurRoyale.ttf": .95,
               "ImperialScript.ttf": .9}
@@ -220,6 +223,7 @@ def main():
         # --rotate: var olan düzenleri de yeniden dağıt (yeni düzenler eklendiğinde bir kez).
         kept = None if "--rotate" in sys.argv else card.get("style")
         st = OVERRIDE.get(card["id"]) or kept or ROTATION[(i + offset) % len(ROTATION)]
+        if "A" in (card.get("greeting") or ""): st = A_SWAP.get(st, st)
         card.pop("greetingFont", None)
         card["style"] = st
         if card.get("image"):
