@@ -40,7 +40,8 @@ G_LH_MULTI = {"Corinthia.ttf": .85, "MonteCarlo.ttf": .95, "AlexBrush.ttf": .95,
               "ImperialScript.ttf": .9}
 G_WS = {"MonteCarlo.ttf": .12, "ImperialScript.ttf": .12}  # ek kelime aralığı, em (ScriptFont.wordSpacing)  # iki satırlı selamda satır yüksekliği (ScriptFont.lineHeight)
 TOP_MIN, TOP_MAX = .055, .22
-TOP_OVERRIDE = {"cuma_76": .30}  # beyaz yazı: pencerenin açık üstü yerine yeşilliğin önünde
+TOP_OVERRIDE = {"cuma_76": .30,  # beyaz yazı: pencerenin açık üstü yerine yeşilliğin önünde
+                "mirac_15": .06}  # yazı dua eden ellere çok yakındı
 # Gönderide yazı bloğu konuya biniyorsa görsel aşağı kaydırılır (`postAlign` < 1: kırpma penceresi
 # yukarı çıkar, alttan kesilir). Hikâyede görsel tam sığdığı için etkisi yok.
 GAP = .035  # yazı bloğuyla konu arasında bırakılan en az boşluk (gönderi boyuna oran)
