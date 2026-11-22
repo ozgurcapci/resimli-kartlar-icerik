@@ -1,6 +1,6 @@
 """İndirilenler'deki görseller (mtime sırası) → 9:16 → CARDS'taki kategorilere; her kategorinin son kartının ardına eklenir.
 
-Son kullanım: Cuma için 39 görsel (cuma_99–137): doğa fotoğrafları, suluboya doğa, çiçek ve kuş."""
+Son kullanım: Sabah için 37 görsel (sabah_04–40; eski degrade sabah_01–03 silindi)."""
 import io, json
 from pathlib import Path
 from PIL import Image, ImageStat
@@ -8,58 +8,56 @@ from PIL import Image, ImageStat
 DL = Path.home() / "Downloads"
 REPO = Path("E:/yedek/Vibe Coding/Claude/apps/resimli-kartlar-icerik")
 FILES = sorted(DL.glob("*_2K.jpg"), key=lambda f: (f.stat().st_mtime, f.name))
-assert len(FILES) == 39, len(FILES)
-HC, CM, MC, CH = "Hayırlı Cumalar", "Cumanız Mübarek Olsun", "Mübarek Cumalar", "Cumanız Hayırlı Olsun"
-START = {}  # yoksa kategorinin en büyük numarası + 1
+assert len(FILES) == 37, len(FILES)
+HS, GA, GB = "Hayırlı Sabahlar", "Günaydın", "Güne Bismillah"
+START = {"sabah": 4}  # yoksa kategorinin en büyük numarası + 1
 PREFIX = {"ramazan": "ramazan_ayi"}  # kimlik öneki kategori anahtarından farklıysa
-DROP = set()  # silinecek eski kartlar
+DROP = {"sabah_01", "sabah_02", "sabah_03"}  # silinecek eski kartlar
 SKIP = set()  # kullanılmayan görseller
-TOTAL = 418
+TOTAL = 452
 # kategori → [(görsel sırası, mesaj, selam)]
 CARDS = {
-    "cuma": [
-        (0, "Sisli bir sabah, sakin bir gönül dilerim", HC),
-        (1, "Bembeyaz bir gönül, berrak bir dua dilerim", CM),
-        (2, "Akan dere gibi bereketiniz hiç dinmesin", HC),
-        (3, "Doğan güneşle umutlarınız tazelensin", MC),
-        (4, "Her damla çiy gibi rahmet üzerinize insin", HC),
-        (5, "Çiçek açan dallar gibi gönlünüz ferah olsun", CH),
-        (6, "Kökleri sağlam, gölgesi geniş bir iman dilerim", HC),
-        (7, "Şelale gibi coşan bereket hanenize dolsun", CM),
-        (8, "Dağ suyu gibi tertemiz bir gün dilerim", HC),
-        (9, "Su gibi aziz olun, gönlünüz serin kalsın", MC),
-        (10, "Yaylaların huzuru gönlünüze dolsun", HC),
-        (11, "Durgun su gibi sakin, ağaç gibi sabırlı olalım", CH),
-        (12, "Gelincikler gibi neşeli bir Cuma dilerim", HC),
-        (13, "Ormana süzülen ışık gibi rahmet kalbinize dolsun", CM),
-        (14, "Akşamın huzuru gönlünüze yansısın", HC),
-        (15, "Değirmen döner, bereket hiç tükenmesin", MC),
-        (16, "Abdestiniz bereket, namazınız nur olsun", HC),
-        (17, "Kuş sesleri gibi müjdeli haberleriniz olsun", CH),
-        (18, "Yaylanın serinliği, ezanın huzuru sizinle olsun", HC),
-        (19, "Rahmet suyu gönüllerimize aksın", CM),
-        (20, "Köprüler kuran, gönüller yapan bir gün olsun", HC),
-        (21, "Derelerin sesi, duaların sesi olsun", MC),
-        (22, "Köyün sabahı gibi sade ve huzurlu bir gün", HC),
-        (23, "Karlar gibi ak, ezan gibi temiz bir gönül dilerim", CH),
-        (24, "Her mevsimin güzelliği gönlünüze dolsun", HC),
-        (25, "Dallardaki çiçekler gibi umutlarınız açsın", CM),
-        (26, "Bülbülün güle hasreti gibi dualarımız Rabbe olsun", HC),
-        (27, "Küçük bir kuşun sevinci gününüze dolsun", MC),
-        (28, "Bahar dalları gibi taze bir gönül dilerim", HC),
-        (29, "Akan su gibi duru bir kalp dilerim", CH),
-        (30, "Soğuk günlerde sıcak dualar sizinle olsun", HC),
-        (31, "Sevdiklerinizle yan yana huzurlu bir Cuma", CM),
-        (32, "Şakayıklar gibi zarif ve bereketli bir gün dilerim", HC),
-        (33, "Sümbül kokulu, huzur dolu bir Cuma", MC),
-        (34, "Karı delen kardelen gibi umudunuz taze kalsın", HC),
-        (35, "Ortancalar gibi rengârenk bir gönül dilerim", CH),
-        (36, "Yasemin kokulu dualarınız kabul olsun", HC),
-        (37, "Nilüfer gibi tertemiz bir kalp dilerim", CM),
-        (38, "Mor salkımlar gibi bereketiniz bol olsun", HC),
+    "sabah": [
+        (0, "Lale gibi zarif, çiy gibi taze bir sabah dilerim", GA),
+        (1, "Bir fincan kahve, bir tutam huzur dilerim", HS),
+        (2, "Güneşle uyanan gönüllere aydınlık bir gün", GA),
+        (3, "Sofranız taze ekmek gibi bereketli olsun", HS),
+        (4, "Kuş sesleriyle uyanılan huzurlu bir sabah dilerim", GA),
+        (5, "Demli bir çay, güzel bir manzara, huzurlu bir gün", GA),
+        (6, "Simit kokulu, çayı demli bir sabah dilerim", HS),
+        (7, "Kahvaltınız bereketli, gününüz neşeli olsun", HS),
+        (8, "Şehrin üstüne doğan güneş gönlünüze de doğsun", GA),
+        (9, "Durgun su gibi sakin bir sabah dilerim", HS),
+        (10, "Serçeler kadar neşeli bir güne uyanın", GA),
+        (11, "Kahvesi köpüklü, sohbeti tatlı bir sabah dilerim", HS),
+        (12, "Sofranız bereketli, sohbetiniz bol olsun", HS),
+        (13, "Çay ve simitle güzel bir güne merhaba", GA),
+        (14, "Güzel bir günün kapıları size açılsın", HS),
+        (15, "Gül kokulu bir sabah, güler yüzlü bir gün dilerim", GA),
+        (16, "Sabah ezanıyla başlayan gününüz bereketli olsun", GB),
+        (17, "Pencerenizden huzur, kapınızdan bereket girsin", GA),
+        (18, "Çiçek dolu yollarda güzel bir gün dilerim", GA),
+        (19, "Güvercin kanadında selamımız size gelsin", HS),
+        (20, "Semaver kaynasın, sohbet hiç bitmesin", GA),
+        (21, "Bahçenin bereketi sofranızdan eksik olmasın", HS),
+        (22, "Taze çay yaprağı gibi canlı bir gün dilerim", GA),
+        (23, "Dalga sesi, çay buharı ve huzurlu bir sabah", GA),
+        (24, "Sulanan çiçekler gibi gönlünüz yeşersin", HS),
+        (25, "Ağaçlardan süzülen ışık yolunuzu aydınlatsın", GB),
+        (26, "Yayla havası gibi ferah bir gün dilerim", GA),
+        (27, "Lavanta kokulu, sakin bir sabah dilerim", HS),
+        (28, "Dalında kiraz gibi tatlı bir gün dilerim", GA),
+        (29, "Her damla çiy yeni bir umut olsun", HS),
+        (30, "Sisli dağlardan size güzel bir sabah selamı", GA),
+        (31, "Güneşli bir pencere, tatlı bir uyanış dilerim", GA),
+        (32, "Çaydanlık kaynadı, güzel bir gün başlasın", GB),
+        (33, "Bal gibi tatlı, kaymak gibi yumuşak bir gün dilerim", GA),
+        (34, "Portakal bahçesi gibi ferah ve bereketli bir gün", HS),
+        (35, "Köy kahvaltısı tadında güzel bir gün dilerim", HS),
+        (36, "Deniz kadar geniş, ufuk kadar aydınlık bir gün dilerim", GA),
     ],
 }
-assert sorted(i for v in CARDS.values() for i, _, _ in v) == sorted(set(range(39)) - SKIP)
+assert sorted(i for v in CARDS.values() for i, _, _ in v) == sorted(set(range(37)) - SKIP)
 W, H = 1080, 1920; PH = W * 5 // 4; TOP = H - PH
 
 
