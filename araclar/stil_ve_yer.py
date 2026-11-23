@@ -49,7 +49,9 @@ TOP_OVERRIDE = {"cuma_76": .30,  # beyaz yazı: pencerenin açık üstü yerine 
 # yukarı çıkar, alttan kesilir). Hikâyede görsel tam sığdığı için etkisi yok.
 GAP = .035  # yazı bloğuyla konu arasında bırakılan en az boşluk (gönderi boyuna oran)
 ALIGN_OVERRIDE = {"kadir_14": .75,  # suluboya lekesinde konu sezilmiyor; selam minareye değiyordu
-                  "hicri_yilbasi_11": .85}  # hilal gönderinin üst kenarında yarım kalıyordu
+                  "hicri_yilbasi_11": .85,  # hilal gönderinin üst kenarında yarım kalıyordu
+                  # dua eden eller yükseğe uzanıyor, yazı parmak uçlarına biniyordu
+                  "uc_aylar_28": .5, "ramazan_ayi_66": .5, "asure_46": .55, "gece_41": .55}
 
 
 def font(name, size, wght=None):
