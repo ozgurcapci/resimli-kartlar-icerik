@@ -1,6 +1,6 @@
 """İndirilenler'deki görseller (mtime sırası) → 9:16 → CARDS'taki kategorilere; her kategorinin son kartının ardına eklenir.
 
-Son kullanım: Gece için 37 görsel (gece_04–40; eski degrade gece_01–03 silindi)."""
+Son kullanım: Regaib için 19 gerçekçi gece fotoğrafı (regaib_15–33)."""
 import io, json
 from pathlib import Path
 from PIL import Image, ImageStat
@@ -8,56 +8,38 @@ from PIL import Image, ImageStat
 DL = Path.home() / "Downloads"
 REPO = Path("E:/yedek/Vibe Coding/Claude/apps/resimli-kartlar-icerik")
 FILES = sorted(DL.glob("*_2K.jpg"), key=lambda f: (f.stat().st_mtime, f.name))
-assert len(FILES) == 37, len(FILES)
-HG, IG, AR = "Hayırlı Geceler", "İyi Geceler", "Allah Rahatlık Versin"
-START = {"gece": 4}  # yoksa kategorinin en büyük numarası + 1
+assert len(FILES) == 19, len(FILES)
+HK, KMO, MK = "Hayırlı Kandiller", "Kandiliniz Mübarek Olsun", "Mübarek Kandiller"
+START = {}  # yoksa kategorinin en büyük numarası + 1
 PREFIX = {"ramazan": "ramazan_ayi"}  # kimlik öneki kategori anahtarından farklıysa
-DROP = {"gece_01", "gece_02", "gece_03"}  # silinecek eski kartlar
+DROP = set()  # silinecek eski kartlar
 SKIP = set()  # kullanılmayan görseller
-TOTAL = 486
+TOTAL = 505
 # kategori → [(görsel sırası, mesaj, selam)]
 CARDS = {
-    "gece": [
-        (0, "Battaniye sıcaklığında huzurlu bir uyku dilerim", IG),
-        (1, "Ateşböcekleri kadar parlak rüyalar dilerim", HG),
-        (2, "Dalgaların sesiyle dinlendiren bir gece dilerim", HG),
-        (3, "Fenerler yolunuzu, dualar gönlünüzü aydınlatsın", HG),
-        (4, "Karlı gecelerde sıcacık bir yuva dilerim", IG),
-        (5, "Ay ışığı gibi sakin bir gece dilerim", AR),
-        (6, "Şehrin ışıkları sönerken gönlünüz huzurla dolsun", HG),
-        (7, "Yıldızlar kadar umutlu bir yarın dilerim", IG),
-        (8, "Bir bardak ıhlamur, deliksiz bir uyku dilerim", IG),
-        (9, "Mum ışığı gibi yumuşak bir gece dilerim", HG),
-        (10, "Gece sefaları gibi açan güzel rüyalar dilerim", IG),
-        (11, "Hilalin altında huzurla uyuyun", HG),
-        (12, "Pencerenizden yıldızlar, gönlünüzden dualar eksik olmasın", HG),
-        (13, "Mışıl mışıl, tatlı bir uyku dilerim", IG),
-        (14, "Durgun göl gibi sakin bir gece dilerim", HG),
-        (15, "Yasemin kokulu, huzurlu bir gece dilerim", IG),
-        (16, "Ihlamur kokulu sohbetlerle güzel bir gece", HG),
-        (17, "Kar beyazı, pamuk gibi bir uyku dilerim", IG),
-        (18, "Gece okunan dualar sabaha nur olsun", AR),
-        (19, "Kuşlar gibi rahat, tatlı bir uyku dilerim", IG),
-        (20, "Şehir uyurken dualarımız sizinle olsun", HG),
-        (21, "Semaver başında güzel bir gece dilerim", IG),
-        (22, "Deniz feneri gibi yolunuz hep aydınlık olsun", HG),
-        (23, "Ateşin sıcaklığı, yıldızların huzuru sizinle olsun", IG),
-        (24, "Çamların fısıltısıyla huzurlu bir gece dilerim", HG),
-        (25, "Evinizin ışığı hiç sönmesin", AR),
-        (26, "Yatsı duasıyla huzur dolu bir gece dilerim", AR),
-        (27, "Çöl gecesi kadar dingin bir gönül dilerim", HG),
-        (28, "Köprünün ışıkları gibi umutlarınız parlasın", IG),
-        (29, "Eski sokakların sessizliği gibi derin bir uyku dilerim", IG),
-        (30, "Limanına dönen kayık gibi huzurla dinlenin", HG),
-        (31, "Lavanta kokulu, deliksiz bir uyku dilerim", IG),
-        (32, "Yıldızların yansıdığı göl gibi berrak rüyalar dilerim", HG),
-        (33, "Peri bacalarının sessizliğinde güzel bir gece dilerim", IG),
-        (34, "Son çay, son dua; huzurlu bir gece dilerim", HG),
-        (35, "Dağ evinin sessizliği gibi rahat bir uyku dilerim", IG),
-        (36, "Lamba ışığında tatlı bir gece dilerim", AR),
+    "regaib": [
+        (0, "Bir lokum, bir çay; tatlı sohbetli bir kandil gecesi", HK),
+        (1, "Akşam ezanıyla başlayan bu gece rahmetle dolsun", KMO),
+        (2, "Camiye giden her yol nur ile dolsun", MK),
+        (3, "Her tanesi bir dua, her duası kabul olsun", HK),
+        (4, "Sofranız bereketli, sohbetiniz muhabbetli olsun", KMO),
+        (5, "Bir gül, bir mum, bir dua; gönlünüz aydınlansın", HK),
+        (6, "Gönül fenerleriniz Regaib gecesinde parlasın", MK),
+        (7, "Şadırvan suyu gibi gönülleriniz arınsın", KMO),
+        (8, "Seccadeniz dualarla, gönlünüz huzurla dolsun", HK),
+        (9, "Şehrin ışıkları gibi dualarınız semaya yükselsin", MK),
+        (10, "Bu gece okunan dualar kalplere şifa olsun", KMO),
+        (11, "Karlı bir gecede sıcacık dualar sizinle olsun", HK),
+        (12, "Soğuk gecede ısıtan bir dua, sönmeyen bir kandil", MK),
+        (13, "Camilerin ışığı gönüllere yansısın", KMO),
+        (14, "Okunan her ayet evinize huzur getirsin", HK),
+        (15, "Köy camisinin ışığı kadar sıcak bir kandil dilerim", MK),
+        (16, "Açılan eller boş dönmesin, dualarınız kabul olsun", KMO),
+        (17, "Üç ayların ilk müjdesi hepimize hayırlar getirsin", HK),
+        (18, "Minarelerdeki ışıklar gibi kalbiniz nurlansın", MK),
     ],
 }
-assert sorted(i for v in CARDS.values() for i, _, _ in v) == sorted(set(range(37)) - SKIP)
+assert sorted(i for v in CARDS.values() for i, _, _ in v) == sorted(set(range(19)) - SKIP)
 W, H = 1080, 1920; PH = W * 5 // 4; TOP = H - PH
 
 
