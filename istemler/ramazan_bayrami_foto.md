@@ -1,0 +1,51 @@
+# Ramazan Bayramı: gerçekçi fotoğraf seti, Flow istemleri (Nano Banana Pro, 9:16, x2)
+
+ramazan_bayrami_01–33 suluboya; bu set (34–53) fotoğraf. Ramazan Bayramı 2027'de 9-11 Mart, 2028'de 26-28 Şubat: ilkbahar başı sabahı (badem çiçeği, lale, sümbül).
+Her istem = konu cümlesi + kuyruk. Kırpmadan ya da yüzdeden söz etmeyin. Kopyalamaya hazır metin: `ramazan_bayrami_foto_hazir.txt`.
+
+## Sabah fotoğraf kuyruğu
+
+> Photorealistic photograph, shot on a full-frame camera with a prime lens, soft natural spring morning light, fresh and gentle color grading, high detail, warm, joyful and peaceful festive mood. The main subject sits low in the frame, grounded near the bottom edge, and does not rise above the middle of the image. The entire upper half is calm, open space with soft, out-of-focus or plain tones and no busy detail, so a greeting text can be written there later. The image continues naturally to every edge: no blank strips, no borders, no frame. No text, no letters, no signs, no calligraphy, no Arabic script, no watermark, no logo. No visible faces. No moon, no crescent, no stars, no lens flare.
+
+## Konular
+
+**34** Bayram namazı, saflar: Rows of men in clean festive clothes standing in prayer in the courtyard of a classical Ottoman mosque at sunrise, seen from behind and from a distance, small in the frame, prayer rugs laid on the stone ground, a soft pale peach morning sky above.
+
+**35** Cami kapısında ayakkabılar: Many pairs of polished shoes neatly lined up on wooden shelves at the entrance of a mosque on a festive morning, soft sunlight falling across them, the carved wooden door softly blurred above.
+
+**36** El öpme: Close-up of a child's small hands gently holding an elderly woman's wrinkled hand with a lace cuff, about to kiss it respectfully, only the hands visible near the bottom, soft window light, a blurred warm cream room above.
+
+**37** Şeker kasesi: A cut-crystal candy bowl on a white lace doily filled with colorfully wrapped candies and pastel Turkish delight dusted with powdered sugar, morning sunlight sparkling in the crystal, a softly blurred cream wall above.
+
+**38** Kolonya ikramı: An elderly hand pouring lemon cologne from a classic glass bottle into a guest's cupped palms, drops glistening in the light, only hands visible low in the frame, a soft blurred bright living room above.
+
+**39** Mendil ve harçlık: A small embroidered handkerchief tied into a bundle with wrapped candies and a few coins peeking out, resting on a wooden table beside a sprig of white blossoms, soft morning light, a plain blurred warm background above.
+
+**40** Bayramlık: A pair of small new red children's shoes and a neatly folded new dress with a ribbon on a white bedspread, gentle morning light from a window, a soft blurred bright bedroom above.
+
+**41** Baklava tepsisi: A round copper tray of fresh pistachio baklava cut in neat diamonds, glistening with syrup, on a white tablecloth, soft daylight from the side, a creamy blurred background above.
+
+**42** Bayram kahvaltısı: A festive Turkish breakfast table with a white lace tablecloth: tulip-shaped tea glasses, a plate of börek, olives, cheese, honey and a small vase of hyacinths, no people, the table low in the frame, a bright blurred room above.
+
+**43** Kahve ve lokum: A small porcelain cup of Turkish coffee with a gold-rimmed saucer, two cubes of rose Turkish delight and a glass of water on an engraved silver tray with an embroidered napkin, soft morning light, a blurred pale background above.
+
+**44** Badem çiçekli köy camisi: A small stone Anatolian village mosque with one short minaret among blossoming white almond trees on a spring morning, fresh green grass in the foreground, the mosque low in the frame, a clear pale blue sky above.
+
+**45** Boğaz sabahı: The Istanbul skyline with mosque domes and minarets low along the bottom edge at sunrise, seen across the calm Bosphorus with a small ferry, soft pink and gold morning light, a wide clear pastel sky above.
+
+**46** Kapıda misafir ayakkabıları: Many pairs of guests' shoes lined up on a doormat in front of an apartment door on a festive morning, a pot of red tulips beside the door, soft hallway light, a plain blurred wall above.
+
+**47** Şeker torbası: A child's small hands holding an open little cloth pouch full of colorful wrapped candies, a few candies in the palm, soft sunlight, only the hands visible low in the frame, a blurred spring garden above.
+
+**48** Bayram yeri salıncağı: An old wooden swing decorated with colorful ribbons in a village square on a festive spring morning, daisies and fresh grass around its base, the swing low in the frame, soft blurred trees and pale sky above.
+
+**49** Lale, cami avlusu: A bed of red and yellow tulips in full bloom in front of a classical Ottoman mosque, the mosque domes far away and low in the frame, shallow depth of field, soft spring sunlight, a clear pale sky above.
+
+**50** Bayram yolu: An elderly couple in festive clothes walking arm in arm along a quiet cobblestone street toward a small mosque in the morning, seen from behind and small in the frame, spring trees in blossom, a soft bright sky above.
+
+**51** Gümüş şekerlik: An engraved silver lidded candy dish (şekerlik) with its lid open, filled with Turkish delight and almond sugar candies, on a lace cloth beside a few pink roses, soft daylight, a blurred cream background above.
+
+**52** Çay, Boğaz kıyısı: Two tulip-shaped glasses of tea on red saucers on a small wooden table by the sea in Istanbul on a spring morning, the Bosphorus and distant domes softly blurred behind, the table low in the frame, a soft pale sky above.
+
+**53** Hediye ve laleler: A small gift box wrapped in cream paper with a sage-green ribbon on a wooden table, surrounded by red tulips and white hyacinths in a vase, soft window light, a bright blurred room above.
+

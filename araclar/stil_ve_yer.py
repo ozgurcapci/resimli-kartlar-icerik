@@ -30,6 +30,7 @@ STYLES = {
 # Kategori içinde sırayla döner; yan yana gelen kartlar farklı görünsün diye karışık sıra.
 ROTATION = ["kitabe", "zarif", "selamOnde", "sicak", "roma", "modern", "klasik", "gosterisli", "asil", "retro", "sade"]
 OVERRIDE = {"asure_28": "selamOnde",  # kitabe selamı ahşabın üstüne düşüp okunmuyordu
+            "kurban_bayrami_33": "sicak", "kurban_bayrami_36": "sicak",  # ince yazı dokulu kapıda, çiçekli dallarda kayboluyordu
             "kadir_05": "klasik", "cuma_76": "klasik", "cuma_79": "klasik",  # konu yukarıdan başlıyor, iri selam ele değiyordu
             "cuma_88": "klasik", "cuma_93": "klasik", "cuma_94": "klasik",  # iri selam ağaca, taşa, ufka biniyordu
             "kadir_08": "klasik", "kadir_11": "klasik", "kadir_13": "klasik", "kadir_15": "klasik",
@@ -44,7 +45,8 @@ G_LH_MULTI = {"Corinthia.ttf": .85, "MonteCarlo.ttf": .95, "AlexBrush.ttf": .95,
 G_WS = {"MonteCarlo.ttf": .12, "ImperialScript.ttf": .12}  # ek kelime aralığı, em (ScriptFont.wordSpacing)  # iki satırlı selamda satır yüksekliği (ScriptFont.lineHeight)
 TOP_MIN, TOP_MAX = .055, .22
 TOP_OVERRIDE = {"cuma_76": .30,  # beyaz yazı: pencerenin açık üstü yerine yeşilliğin önünde
-                "mirac_15": .06}  # yazı dua eden ellere çok yakındı
+                "mirac_15": .06,  # yazı dua eden ellere çok yakındı
+                "kurban_bayrami_36": .30}  # üstte çiçekli dallara biniyordu; dalların altındaki bulanık alana
 # Gönderide yazı bloğu konuya biniyorsa görsel aşağı kaydırılır (`postAlign` < 1: kırpma penceresi
 # yukarı çıkar, alttan kesilir). Hikâyede görsel tam sığdığı için etkisi yok.
 GAP = .035  # yazı bloğuyla konu arasında bırakılan en az boşluk (gönderi boyuna oran)
