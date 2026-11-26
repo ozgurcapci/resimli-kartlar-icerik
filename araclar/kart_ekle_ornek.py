@@ -1,6 +1,6 @@
 """İndirilenler'deki görseller (mtime sırası) → 9:16 → CARDS'taki kategorilere; her kategorinin son kartının ardına eklenir.
 
-Son kullanım: 18 Kurban Bayramı fotoğrafı (kurban_bayrami_27–44)."""
+Son kullanım: 17 Arefe fotoğrafı (arefe_15–31)."""
 import io, json
 from pathlib import Path
 from PIL import Image, ImageStat
@@ -8,35 +8,35 @@ from PIL import Image, ImageStat
 DL = Path.home() / "Downloads"
 REPO = Path("E:/yedek/Vibe Coding/Claude/apps/resimli-kartlar-icerik")
 FILES = sorted(DL.glob("*_2K.jpg"), key=lambda f: (f.stat().st_mtime, f.name))
-assert len(FILES) == 18, len(FILES)
+assert len(FILES) == 17, len(FILES)
 HB, BMO, IB, MB, NB, BKO, MuB = ("Hayırlı Bayramlar", "Bayramınız Mübarek Olsun", "İyi Bayramlar", "Mutlu Bayramlar",
                                  "Nice Bayramlara", "Bayramınız Kutlu Olsun", "Mübarek Bayramlar")
+HA, AMO, MA = "Hayırlı Arefeler", "Arefeniz Mübarek Olsun", "Mübarek Arefeler"
 START = {}  # yoksa kategorinin en büyük numarası + 1
 PREFIX = {"ramazan": "ramazan_ayi"}  # kimlik öneki kategori anahtarından farklıysa
 DROP = set()  # silinecek eski kartlar
 SKIP = set()  # kullanılmayan görseller
-TOTAL = 573  # kurban_bayrami_30 (kuzu sevme) sonradan silindi
+TOTAL = 590
 # kategori → [(görsel sırası, mesaj, selam)]
 CARDS = {
-    "kurban_bayrami": [
-        (15, "Kurbanınız kabul, bayramınız bereketli olsun", HB),
-        (16, "Kuzular gibi masum, yaylalar gibi ferah bir bayram", IB),
-        (17, "Bereketi bol, huzuru daim bir Kurban Bayramı dilerim", BMO),
-        (11, "Merhametle büyüyen gönüllere nice bayramlar", MB),
-        (12, "Sessiz, huzurlu ve bereketli bir bayram dilerim", NB),
-        (13, "Hacılarımızın duası hepimize ulaşsın", MuB),
-        (14, "Kapıdan kapıya bereket taşıyan bir bayram olsun", HB),
-        (10, "Paylaştıkça çoğalan bir Kurban Bayramı dilerim", BKO),
-        (0, "Sofranız bereketli, payınız bol olsun", IB),
-        (1, "Kiraz ağacı altında, sevdiklerinizle bir bayram", MB),
-        (2, "Kiraz gibi tatlı, çay gibi sıcacık bir bayram", NB),
-        (3, "Bir fincan kahveyle hatırı sayılan nice bayramlara", BKO),
-        (4, "Avlunuz misafirle, çaydanlığınız sohbetle dolsun", HB),
-        (5, "Başak başak bereket, gönül gönül huzur dilerim", MuB),
-        (6, "Kınalı ellerin duası hiç eksik olmasın", BMO),
-        (7, "Annelerimizin, ninelerimizin duası üzerimizde olsun", HB),
-        (8, "Gelincikler gibi canlı, rengârenk bir bayram dilerim", IB),
-        (9, "Kapınızın önü misafir ayakkabısıyla dolsun", MB),
+    "arefe": [
+        (11, "Medine'nin huzuru gönlünüze dolsun", AMO),
+        (16, "Mina'dan Arafat'a yükselen dualara âmin", HA),
+        (3, "Hacılarımız sağ salim yuvalarına dönsün", MA),
+        (10, "Açılan eller rahmetle dolsun", HA),
+        (12, "Büyüklerimizin hayır duası yolumuzu aydınlatsın", AMO),
+        (13, "Arefe orucunuz kabul, iftarınız bereketli olsun", HA),
+        (14, "Okunan her ayet gönlünüze huzur versin", MA),
+        (15, "Arefe gecesi secdeleriniz kabul olsun", AMO),
+        (2, "Bayram sabahına huzurla uyanmak dileğiyle", HA),
+        (0, "Gün batıyor, bayram geliyor; gönlünüz aydın olsun", MA),
+        (1, "Rahmetle andığımız tüm sevdiklerimize selam olsun", AMO),
+        (4, "Sarmalar sarıldı, bayram sofrası hazır", HA),
+        (5, "Mis kokulu çöreklerle bayram kapınızı çalsın", MA),
+        (6, "Bayramlıklar ütülendi, yarın bayram", HA),
+        (7, "Terlikler dizildi, misafirlere şimdiden hoş geldiniz", AMO),
+        (8, "Bayram şekerleri hazır, çocuklar yolda", HA),
+        (9, "Eviniz leylak kokulu, gönlünüz ferah olsun", MA),
     ],
 }
 assert sorted(i for v in CARDS.values() for i, _, _ in v) == sorted(set(range(len(FILES))) - SKIP)
